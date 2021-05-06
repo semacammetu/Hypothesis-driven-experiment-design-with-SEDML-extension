@@ -1,0 +1,1 @@
+"{\"duration\": 500, \"violate\": 1, \"min_v_dur\": 30, \"max_v_dur\": 100, \"v_dur\": 50, \"min_step\": 1, \"max_step\": 5, \"sleep\": 0, \"s_min\": 0, \"s_max\": 100, \"t\": 0}"

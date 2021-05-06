@@ -1,0 +1,4 @@
+The robot can move inside the closed ractange marked by X's. If it pushes through
+one of the X's, it does not move.
+The robot is expected to stay in the are not marked by 1's. If the robot is in the area
+marked by 1's, it gets labeled 1 at that time point.

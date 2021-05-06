@@ -1,0 +1,28 @@
+The robot can move inside the closed ractange marked by X's. If it pushes through
+one of the X's, it does not move.
+The robot is expected to stay in the are not marked by 1's. If the robot is in the area
+marked by 1's, it gets labeled 1 at that time point.
+
+
+About the following game map:
+
+XXXXXXXXX
+X1111   X
+X1111   X
+X       X
+X       X
+X    111X
+X    111X
+X    111X
+X    111X
+XXXXXXXXX
+
+
+
+# violation formula = ( ! ( ( x0 < 2 ) & ( x1 < 4 ) ) ) &  ( ! ( ( x0 > 3 ) & ( x1 > 3 ) ) )
+
+Expected formula
+# A 1 1 ( x2 = 1 ) & P 1 1 ( ( x0 < 3 ) & ( x1 < 4 ) ) |
+  A 1 1 ( x2 = 4 ) & P 1 1 ( ( x0 < 2 ) & ( x1 < 5 ) ) |
+  A 1 1 ( x2 = 2 ) & P 1 1 ( ( x0 > 3 ) & ( x1 > 2 ) ) |
+  A 1 1 ( x2 = 3 ) & P 1 1 ( ( x0 > 2 ) & ( x1 > 3 ) )

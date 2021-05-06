@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sedML xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://sed-ml.org/" level="1" version="1">
+  <listOfSimulations>
+    <uniformTimeCourse initialTime="0" outputStartTime="0" outputEndTime="100" numberOfPoints="1000" id="simulation">
+      <algorithm kisaoID="KISAO:0000088" />
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model" language="urn:sedml:language:sbml" source="urn:miriam:biomodels.db:BIOMD0000000021" />
+  </listOfModels>
+  <listOfTasks>
+    <task simulationReference="simulation" modelReference="model" id="task" />
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="timeDG" name="timeDG">
+      <listOfVariables>
+        <variable id="time" name="time" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>time</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="x0DG" name="x0DG">
+      <listOfVariables>
+        <variable id="x0" name="x0" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>x0</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="x1DG" name="x1DG">
+      <listOfVariables>
+        <variable id="x1" name="x1" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>x1</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="x2DG" name="x2DG">
+      <listOfVariables>
+        <variable id="x2" name="x2" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>x2</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="x3DG" name="x3DG">
+      <listOfVariables>
+        <variable id="x3" name="x3" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>x3</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="x4DG" name="x4DG">
+      <listOfVariables>
+        <variable id="x4" name="x4" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>x4</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="x5DG" name="x5DG">
+      <listOfVariables>
+        <variable id="x5" name="x5" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>x5</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="x6DG" name="x6DG">
+      <listOfVariables>
+        <variable id="x6" name="x6" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>x6</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="x7DG" name="x7DG">
+      <listOfVariables>
+        <variable id="x7" name="x7" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>x7</math:ci>
+      </math:math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="plot1_Basic">
+      <listOfCurves>
+        <curve id="x0DG" logX="false" logY="false" xDataReference="timeDG" yDataReference="x0DG" />
+        <curve id="x1DG" logX="false" logY="false" xDataReference="timeDG" yDataReference="x1DG" />
+        <curve id="x2DG" logX="false" logY="false" xDataReference="timeDG" yDataReference="x2DG" />
+        <curve id="x3DG" logX="false" logY="false" xDataReference="timeDG" yDataReference="x3DG" />
+        <curve id="x4DG" logX="false" logY="false" xDataReference="timeDG" yDataReference="x4DG" />
+        <curve id="x5DG" logX="false" logY="false" xDataReference="timeDG" yDataReference="x5DG" />
+        <curve id="x6DG" logX="false" logY="false" xDataReference="timeDG" yDataReference="x6DG" />
+        <curve id="x7DG" logX="false" logY="false" xDataReference="timeDG" yDataReference="x7DG" />
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

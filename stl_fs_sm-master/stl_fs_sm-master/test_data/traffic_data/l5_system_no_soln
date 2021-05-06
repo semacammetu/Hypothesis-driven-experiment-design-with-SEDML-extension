@@ -1,0 +1,7 @@
+LINK number:0 capacity:40 saturation_flow:16 dl_min:2 dl_max:3.99 vdown:0 linkdir:h flowdir:+ turn_ratios:1=0.8
+LINK number:1 capacity:40 saturation_flow:16 vdown:1 vup:0 linkdir:h flowdir:+ turn_ratios:2=0.75 supply_ratios:a-0=1|b-3=1
+LINK number:2 capacity:40 saturation_flow:16 vup:1 linkdir:h flowdir:+ supply_ratios:a-1=1|b-4=1
+LINK number:3 capacity:20 saturation_flow:8 dl_max:3.99 vdown:0 linkdir:v flowdir:+ turn_ratios:1=0.401
+LINK number:4 capacity:20 saturation_flow:8 dl_max:3.99 vdown:1 linkdir:v flowdir:+ turn_ratios:2=0.401
+INTERSECTION number:0 act_set:a=0|b=3
+INTERSECTION number:1 act_set:a=1|b=4

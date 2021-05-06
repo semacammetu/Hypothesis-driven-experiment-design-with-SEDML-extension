@@ -1,0 +1,483 @@
+/usr/bin/python /Users/ebru/PycharmProjects/stl_fs_sm/main.py
+Toy Ex: Done with generate basic traces, trace no0
+Toy Ex: Done with generate basic traces, trace no1
+Toy Ex: Done with generate basic traces, trace no2
+Toy Ex: Done with generate basic traces, trace no3
+Toy Ex: Done with generate basic traces, trace no4
+Toy Ex: Done with generate basic traces, trace no5
+Toy Ex: Done with generate basic traces, trace no6
+Toy Ex: Done with generate basic traces, trace no7
+Toy Ex: Done with generate basic traces, trace no8
+Toy Ex: Done with generate basic traces, trace no9
+Toy Ex: Done with generate basic traces, trace no10
+Toy Ex: Done with generate basic traces, trace no11
+Toy Ex: Done with generate basic traces, trace no12
+Toy Ex: Done with generate basic traces, trace no13
+Toy Ex: Done with generate basic traces, trace no14
+Toy Ex: Done with generate basic traces, trace no15
+Toy Ex: Done with generate basic traces, trace no16
+Toy Ex: Done with generate basic traces, trace no17
+Toy Ex: Done with generate basic traces, trace no18
+Toy Ex: Done with generate basic traces, trace no19
+label count before the controller: 648
+---------------------------------------------------------------------------------------
+                           search_all_search_space_toy_example
+---------------------------------------------------------------------------------------
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x2 = p21 ) ) )
+With valuation 0.425328130543 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( A 2 2 ( x2 = 2 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 A 2 2 x2 = 2 ,in time: 9.87264800072
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( A 2 2 ( x2 = 2 ) ) ) with valuation 0.425328130543
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x2 = p2 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x0 > p00 ) ) )
+With valuation 0.412556053812 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 0 ( x0 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 A 0 0 x0 > 0 ,in time: 19.1002538204
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x0 < p00 ) ) )
+With valuation 0.775185141648 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 0 ( x0 < 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 A 0 0 x0 < 1 ,in time: 19.119287014
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 0 ( x0 < 1 ) ) ) with valuation 0.775185141648
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x0 < p0 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x1 > p10 ) ) )
+With valuation 0.794302749255 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( A 0 0 ( x1 > 4 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 A 0 0 x1 > 4 ,in time: 16.5298490524
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( A 0 0 ( x1 > 4 ) ) ) with valuation 0.794302749255
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x1 > p1 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x1 < p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x1 < p10 ) ) )
+With valuation 0.412556053812 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 0 ( x1 < 6 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 A 0 0 x1 < 6 ,in time: 16.8285651207
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x2 = p21 ) ) )
+With valuation 0.472486924124 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( P 2 4 ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 P 2 4 x2 = 1 ,in time: 9.94395184517
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x0 > p00 ) ) )
+With valuation 0.412556053812 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( P 0 0 ( x0 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 P 0 0 x0 > 0 ,in time: 19.1856369972
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x0 < p00 ) ) )
+With valuation 0.775185141648 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( P 0 0 ( x0 < 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 P 0 0 x0 < 1 ,in time: 19.1089971066
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x1 > p10 ) ) )
+With valuation 0.794302749255 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( P 0 0 ( x1 > 4 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 P 0 0 x1 > 4 ,in time: 16.12946105
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x1 < p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x1 < p10 ) ) )
+With valuation 0.412556053812 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( P 0 0 ( x1 < 6 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 P 0 0 x1 < 6 ,in time: 16.194767952
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 > p0 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 > p00 ) & ( x2 = p21 ) ) )
+With valuation 0.418362373584 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x0 > 0 ) & ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 & x0 > 0 x2 = 1 ,in time: 10.9882481098
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) & ( x2 = p21 ) ) )
+With valuation 0.482300884956 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 < 1 ) & ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x0 < 1 x2 = 1 ,in time: 10.8784241676
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) & ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) & ( x0 > p01 ) ) )
+With valuation 0.775185141648 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 < 1 ) & ( x0 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x0 < 1 x0 > 0 ,in time: 21.9155631065
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) & ( x2 = p21 ) ) )
+With valuation 0.560411311054 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x1 > 4 ) & ( x2 = 2 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 & x1 > 4 x2 = 2 ,in time: 9.65793704987
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) & ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) & ( x0 > p00 ) ) )
+With valuation 0.794302749255 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x1 > 4 ) & ( x0 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 & x1 > 4 x0 > 0 ,in time: 19.4188439846
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) & ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) & ( x0 < p00 ) ) )
+With valuation 0.794302749255 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x1 > 4 ) & ( x0 < 7 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 & x1 > 4 x0 < 7 ,in time: 20.4072921276
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x2 = p21 ) ) )
+With valuation 0.418362373584 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x1 < 6 ) & ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 & x1 < 6 x2 = 1 ,in time: 10.0504238605
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x0 > p00 ) ) )
+With valuation 0.412556053812 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 6 ) & ( x0 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x1 < 6 x0 > 0 ,in time: 19.6575770378
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x0 < p00 ) ) )
+With valuation 0.775185141648 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 6 ) & ( x0 < 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x1 < 6 x0 < 1 ,in time: 19.6481981277
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x1 > p11 ) ) )
+With valuation 0.794302749255 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x1 < 6 ) & ( x1 > 4 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 & x1 < 6 x1 > 4 ,in time: 17.9385449886
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 > p0 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 > p00 ) | ( x2 = p21 ) ) )
+With valuation 0.412556053812 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 > 0 ) | ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x0 > 0 x2 = 1 ,in time: 11.7892739773
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) | ( x2 = p21 ) ) )
+With valuation 0.643275609546 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 < 1 ) | ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x0 < 1 x2 = 1 ,in time: 11.6204829216
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) | ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) | ( x0 > p01 ) ) )
+With valuation 0.639069023719 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 < 1 ) | ( x0 > 7 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x0 < 1 x0 > 7 ,in time: 23.2029948235
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) | ( x2 = p21 ) ) )
+With valuation 0.664582850969 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x1 > 4 ) | ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 | x1 > 4 x2 = 1 ,in time: 10.7386960983
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) | ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) | ( x0 > p00 ) ) )
+With valuation 0.630665380906 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x1 > 4 ) | ( x0 > 7 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 | x1 > 4 x0 > 7 ,in time: 20.2059659958
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) | ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) | ( x0 < p00 ) ) )
+With valuation 0.860255640388 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 > 5 ) | ( x0 < 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 > 5 x0 < 1 ,in time: 19.631937027
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 > 5 ) | ( x0 < 1 ) ) ) with valuation 0.860255640388
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) | ( x0 < p0 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x2 = p21 ) ) )
+With valuation 0.412556053812 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 6 ) | ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 < 6 x2 = 1 ,in time: 9.76786208153
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x0 > p00 ) ) )
+With valuation 0.412556053812 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 0 ) | ( x0 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 < 0 x0 > 0 ,in time: 19.0229661465
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x0 < p00 ) ) )
+With valuation 0.553833879231 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 0 ) | ( x0 < 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 < 0 x0 < 1 ,in time: 19.1335201263
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x1 > p11 ) ) )
+With valuation 0.565903793177 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x1 < 0 ) | ( x1 > 4 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 | x1 < 0 x1 > 4 ,in time: 16.6899399757
+Best Result is : ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 > 5 ) | ( x0 < 1 ) ) )
+With the Valuation : 0.860255640388
+
+---------------------------------------------------------------------------------------
+search_all_search_space_toy_example ended in 484.425549984 seconds
+---------------------------------------------------------------------------------------
+folder name: test_data/toy_example_data/
+trace count: 20
+processor count: 24
+parameter domains: {'p2': [1, 2, 3, 4], 'pS': xrange(3), 'p0': xrange(8), 'p1': xrange(7), 'pP': xrange(0, 6, 2), 'pA': xrange(0, 6, 2)}
+return type: f03_score
+searched until operator count: 1
+( A 0 0 ( x2 = 1.0 ) ) & ( P 1 1 ( ( x1 > 5.0 ) | ( x0 < 1.0 ) ) )
+fp: 0 fn: 362 tp: 184 tn: 1254 precision: 1.0 recall: 0.336996336996
+f1 score: 0.504109589041 f0.5 score: 0.717628705148 f0.9 score: 0.531791907514
+f0.1 score: 0.980893064499 f0.15 score: 0.958504215809 f0.2 score: 0.929654100272 f0.3 score: 0.860255640388
+f0.4 score: 0.786556603774
+Done 0
+Done 1
+Done 2
+Done 3
+Done 4
+Done 5
+Done 6
+Done 7
+Done 8
+Done 9
+Done 10
+Done 11
+Done 12
+Done 13
+Done 14
+Done 15
+Done 16
+Done 17
+Done 18
+Done 19
+Controller construction done. Prevented 389 violation occasions.
+There were no possible modes left for a controller input for 0 times.
+label count after controller 0 is: 892
+---------------------------------------------------------------------------------------
+                           search_all_search_space_toy_example
+---------------------------------------------------------------------------------------
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x2 = p21 ) ) )
+With valuation 0.455771495878 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 0 ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 A 0 0 x2 = 4 ,in time: 9.25159907341
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 0 ( x2 = 4 ) ) ) with valuation 0.455771495878
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x2 = p2 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x0 > p00 ) ) )
+With valuation 0.561359623308 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 4 ( x0 > 2 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 A 0 4 x0 > 2 ,in time: 18.5299379826
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 4 ( x0 > 2 ) ) ) with valuation 0.561359623308
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x0 > p0 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x0 < p00 ) ) )
+With valuation 0.53031064413 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 0 ( x0 < 7 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 A 0 0 x0 < 7 ,in time: 19.0008790493
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x1 > p10 ) ) )
+With valuation 0.53031064413 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 0 ( x1 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 A 0 0 x1 > 0 ,in time: 16.2631399632
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x1 < p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x1 < p10 ) ) )
+With valuation 0.668265565438 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 0 ( x1 < 3 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 A 0 0 x1 < 3 ,in time: 16.2716419697
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( A 0 0 ( x1 < 3 ) ) ) with valuation 0.668265565438
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x1 < p1 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x2 = p21 ) ) )
+With valuation 0.550759577279 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( P 0 2 ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 P 0 2 x2 = 4 ,in time: 9.67518806458
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x0 > p00 ) ) )
+With valuation 0.559375 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( P 0 2 ( x0 > 3 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 P 0 2 x0 > 3 ,in time: 18.7924940586
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x0 < p00 ) ) )
+With valuation 0.539871223378 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( P 0 2 ( x0 < 6 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 P 0 2 x0 < 6 ,in time: 19.0115749836
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x1 > p10 ) ) )
+With valuation 0.53031064413 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( P 0 0 ( x1 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 P 0 0 x1 > 0 ,in time: 16.9277319908
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x1 < p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x1 < p10 ) ) )
+With valuation 0.668265565438 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( P 0 0 ( x1 < 3 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 P 0 0 x1 < 3 ,in time: 16.7157709599
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 > p0 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 > p00 ) & ( x2 = p21 ) ) )
+With valuation 0.48734256927 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 > 2 ) & ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x0 > 2 x2 = 4 ,in time: 10.8992958069
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) & ( x2 = p21 ) ) )
+With valuation 0.455771495878 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 < 7 ) & ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x0 < 7 x2 = 4 ,in time: 10.9079458714
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) & ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) & ( x0 > p01 ) ) )
+With valuation 0.557830092119 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 < 7 ) & ( x0 > 2 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x0 < 7 x0 > 2 ,in time: 21.4724709988
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) & ( x2 = p21 ) ) )
+With valuation 0.455771495878 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 > 0 ) & ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x1 > 0 x2 = 4 ,in time: 10.1507771015
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) & ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) & ( x0 > p00 ) ) )
+With valuation 0.557830092119 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 > 0 ) & ( x0 > 2 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x1 > 0 x0 > 2 ,in time: 22.6651418209
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) & ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) & ( x0 < p00 ) ) )
+With valuation 0.53031064413 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 > 0 ) & ( x0 < 7 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x1 > 0 x0 < 7 ,in time: 20.6164300442
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x2 = p21 ) ) )
+With valuation 0.506479057592 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 4 ) & ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x1 < 4 x2 = 4 ,in time: 10.9515659809
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x0 > p00 ) ) )
+With valuation 0.70626349892 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 3 ) & ( x0 > 2 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x1 < 3 x0 > 2 ,in time: 18.6442258358
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 3 ) & ( x0 > 2 ) ) ) with valuation 0.70626349892
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x0 > p0 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x0 < p00 ) ) )
+With valuation 0.668265565438 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 3 ) & ( x0 < 7 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x1 < 3 x0 < 7 ,in time: 19.8606870174
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x1 > p11 ) ) )
+With valuation 0.668265565438 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 3 ) & ( x1 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 & x1 < 3 x1 > 0 ,in time: 135.505430937
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 > p0 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 > p00 ) | ( x2 = p21 ) ) )
+With valuation 0.570722713864 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 > 2 ) | ( x2 = 3 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x0 > 2 x2 = 3 ,in time: 14.187538147
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) | ( x2 = p21 ) ) )
+With valuation 0.53031064413 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 < 7 ) | ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x0 < 7 x2 = 1 ,in time: 13.4443178177
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) | ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) | ( x0 > p01 ) ) )
+With valuation 0.557830092119 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x0 < 0 ) | ( x0 > 2 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x0 < 0 x0 > 2 ,in time: 24.500991106
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) | ( x2 = p21 ) ) )
+With valuation 0.53031064413 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 > 0 ) | ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 > 0 x2 = 1 ,in time: 9.87537693977
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) | ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) | ( x0 > p00 ) ) )
+With valuation 0.557830092119 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 > 6 ) | ( x0 > 2 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 > 6 x0 > 2 ,in time: 19.6228251457
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) | ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) | ( x0 < p00 ) ) )
+With valuation 0.53031064413 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 > 0 ) | ( x0 < 0 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 > 0 x0 < 0 ,in time: 19.0639538765
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x2 = p21 ) ) )
+With valuation 0.662491605104 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 2 ) | ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 < 2 x2 = 4 ,in time: 10.7526249886
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x0 > p00 ) ) )
+With valuation 0.619175317186 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 3 ) | ( x0 > 7 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 < 3 x0 > 7 ,in time: 19.1701741219
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x0 < p00 ) ) )
+With valuation 0.668265565438 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 3 ) | ( x0 < 0 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 < 3 x0 < 0 ,in time: 19.9797019958
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x1 > p11 ) ) )
+With valuation 0.668265565438 ,best parameters form ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 3 ) | ( x1 > 6 ) ) ) ,with prefix form: & A 0 0 x2 = 1 P 1 1 | x1 < 3 x1 > 6 ,in time: 16.4589951038
+Best Result is : ( A 0 0 ( x2 = 1 ) ) & ( P 1 1 ( ( x1 < 3 ) & ( x0 > 2 ) ) )
+With the Valuation : 0.70626349892
+
+---------------------------------------------------------------------------------------
+search_all_search_space_toy_example ended in 609.222349167 seconds
+---------------------------------------------------------------------------------------
+folder name: test_data/toy_example_data/
+trace count: 20
+processor count: 24
+parameter domains: {'p2': [1, 2, 3, 4], 'pS': xrange(3), 'p0': xrange(8), 'p1': xrange(7), 'pP': xrange(0, 6, 2), 'pA': xrange(0, 6, 2)}
+return type: f03_score
+searched until operator count: 1
+( A 0 0 ( x2 = 1.0 ) ) & ( P 1 1 ( ( x1 < 3.0 ) & ( x0 > 2.0 ) ) )
+fp: 24 fn: 640 tp: 180 tn: 956 precision: 0.882352941176 recall: 0.219512195122
+f1 score: 0.3515625 f0.5 score: 0.550122249389 f0.9 score: 0.375259156876
+f0.1 score: 0.856738925542 f0.15 score: 0.827376938638 f0.2 score: 0.790540540541 f0.3 score: 0.70626349892
+f0.4 score: 0.622911694511
+Done 0
+Done 1
+Done 2
+Done 3
+Done 4
+Done 5
+Done 6
+Done 7
+Done 8
+Done 9
+Done 10
+Done 11
+Done 12
+Done 13
+Done 14
+Done 15
+Done 16
+Done 17
+Done 18
+Done 19
+Controller construction done. Prevented 1015 violation occasions.
+There were no possible modes left for a controller input for 0 times.
+label count after controller 1 is: 933
+---------------------------------------------------------------------------------------
+                           search_all_search_space_toy_example
+---------------------------------------------------------------------------------------
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x2 = p21 ) ) )
+With valuation 0.522271517303 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( A 2 2 ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 A 2 2 x2 = 4 ,in time: 9.23350214958
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( A 2 2 ( x2 = 4 ) ) ) with valuation 0.522271517303
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x2 = p2 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x0 > p00 ) ) )
+With valuation 0.590963855422 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( A 0 0 ( x0 > 7 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 A 0 0 x0 > 7 ,in time: 18.2178258896
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( A 0 0 ( x0 > 7 ) ) ) with valuation 0.590963855422
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x0 > p0 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x0 < p00 ) ) )
+With valuation 0.492281766094 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( A 0 0 ( x0 < 7 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 A 0 0 x0 < 7 ,in time: 20.7747161388
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x1 > p10 ) ) )
+With valuation 0.492281766094 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( A 0 0 ( x1 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 A 0 0 x1 > 0 ,in time: 17.7134571075
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x1 < p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( A pA1 pA2 ( x1 < p10 ) ) )
+With valuation 0.743034973325 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( A 0 0 ( x1 < 2 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 A 0 0 x1 < 2 ,in time: 16.3690891266
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( A 0 0 ( x1 < 2 ) ) ) with valuation 0.743034973325
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( A pA pA ( x1 < p1 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x2 = p21 ) ) )
+With valuation 0.597260273973 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( P 2 4 ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 P 2 4 x2 = 4 ,in time: 9.16311597824
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x0 > p00 ) ) )
+With valuation 0.590963855422 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( P 0 0 ( x0 > 7 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 P 0 0 x0 > 7 ,in time: 18.1573209763
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x0 < p00 ) ) )
+With valuation 0.492281766094 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( P 0 0 ( x0 < 7 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 P 0 0 x0 < 7 ,in time: 19.6468169689
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x1 > p10 ) ) )
+With valuation 0.492281766094 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( P 0 0 ( x1 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 P 0 0 x1 > 0 ,in time: 17.1801168919
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( P pP pP ( x1 < p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( P pP0 pP1 ( x1 < p10 ) ) )
+With valuation 0.743034973325 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( P 0 0 ( x1 < 2 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 P 0 0 x1 < 2 ,in time: 16.6679089069
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 > p0 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 > p00 ) & ( x2 = p21 ) ) )
+With valuation 0.516996047431 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x0 > 2 ) & ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 & x0 > 2 x2 = 4 ,in time: 10.7975931168
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) & ( x2 = p21 ) ) )
+With valuation 0.472628726287 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x0 < 7 ) & ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 & x0 < 7 x2 = 4 ,in time: 10.6788539886
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) & ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) & ( x0 > p01 ) ) )
+With valuation 0.590963855422 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x0 < 7 ) & ( x0 > 7 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 & x0 < 7 x0 > 7 ,in time: 20.9867670536
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) & ( x2 = p21 ) ) )
+With valuation 0.472628726287 ,best parameters form ( A 0 0 ( x2 = 2 ) ) & ( P 1 1 ( ( x1 > 0 ) & ( x2 = 4 ) ) ) ,with prefix form: & A 0 0 x2 = 2 P 1 1 & x1 > 0 x2 = 4 ,in time: 9.37806105614
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) & ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) & ( x0 > p00 ) ) )
+With valuation 0.590963855422 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 > 0 ) & ( x0 > 7 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 & x1 > 0 x0 > 7 ,in time: 18.5312869549
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) & ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) & ( x0 < p00 ) ) )
+With valuation 0.492281766094 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 > 0 ) & ( x0 < 7 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 & x1 > 0 x0 < 7 ,in time: 18.7149999142
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x2 = p21 ) ) )
+With valuation 0.595429208473 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 < 3 ) & ( x2 = 3 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 & x1 < 3 x2 = 3 ,in time: 9.39203596115
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x0 > p00 ) ) )
+With valuation 0.803430706522 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 < 2 ) & ( x0 > 3 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 & x1 < 2 x0 > 3 ,in time: 18.7107241154
+
+
+Best Formula of search_all_search_space for now is ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 < 2 ) & ( x0 > 3 ) ) ) with valuation 0.803430706522
+ The tuple in iteration is ['( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x0 > p0 ) ) )']
+
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x0 < p00 ) ) )
+With valuation 0.743034973325 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 < 2 ) & ( x0 < 7 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 & x1 < 2 x0 < 7 ,in time: 18.527299881
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) & ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) & ( x1 > p11 ) ) )
+With valuation 0.743034973325 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 < 2 ) & ( x1 > 0 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 & x1 < 2 x1 > 0 ,in time: 16.383658886
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 > p0 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 > p00 ) | ( x2 = p21 ) ) )
+With valuation 0.574548192771 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x0 > 7 ) | ( x2 = 3 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 | x0 > 7 x2 = 3 ,in time: 11.5633730888
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) | ( x2 = p21 ) ) )
+With valuation 0.492281766094 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x0 < 7 ) | ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 | x0 < 7 x2 = 1 ,in time: 12.8461129665
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x0 < p0 ) | ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x0 < p00 ) | ( x0 > p01 ) ) )
+With valuation 0.544363317757 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x0 < 0 ) | ( x0 > 7 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 | x0 < 0 x0 > 7 ,in time: 27.3587908745
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) | ( x2 = p21 ) ) )
+With valuation 0.492281766094 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 > 0 ) | ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 | x1 > 0 x2 = 1 ,in time: 12.8198950291
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) | ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) | ( x0 > p00 ) ) )
+With valuation 0.543434550677 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 > 6 ) | ( x0 > 4 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 | x1 > 6 x0 > 4 ,in time: 19.369478941
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 > p1 ) | ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 > p10 ) | ( x0 < p00 ) ) )
+With valuation 0.492281766094 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 > 0 ) | ( x0 < 0 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 | x1 > 0 x0 < 0 ,in time: 19.4610879421
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x2 = p2 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x2 = p21 ) ) )
+With valuation 0.685894074463 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 < 2 ) | ( x2 = 1 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 | x1 < 2 x2 = 1 ,in time: 9.77147603035
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x0 > p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x0 > p00 ) ) )
+With valuation 0.641025035427 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 < 2 ) | ( x0 > 7 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 | x1 < 2 x0 > 7 ,in time: 19.3860471249
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x0 < p0 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x0 < p00 ) ) )
+With valuation 0.709394453877 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 < 2 ) | ( x0 < 0 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 | x1 < 2 x0 < 0 ,in time: 19.4688198566
+the formula we are on is: ( A 0 pA ( x2 = p2 ) ) & ( P 1 1 ( ( x1 < p1 ) | ( x1 > p1 ) ) )
+( A 0 pA0 ( x2 = p20 ) ) & ( P 1 1 ( ( x1 < p10 ) | ( x1 > p11 ) ) )
+With valuation 0.608938547486 ,best parameters form ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 < 3 ) | ( x1 > 6 ) ) ) ,with prefix form: & A 0 0 x2 = 4 P 1 1 | x1 < 3 x1 > 6 ,in time: 16.6936988831
+Best Result is : ( A 0 0 ( x2 = 4 ) ) & ( P 1 1 ( ( x1 < 2 ) & ( x0 > 3 ) ) )
+With the Valuation : 0.803430706522
+
+---------------------------------------------------------------------------------------
+search_all_search_space_toy_example ended in 484.026708841 seconds
+---------------------------------------------------------------------------------------
+folder name: test_data/toy_example_data/
+trace count: 20
+processor count: 24
+parameter domains: {'p2': [1, 2, 3, 4], 'pS': xrange(3), 'p0': xrange(8), 'p1': xrange(7), 'pP': xrange(0, 6, 2), 'pA': xrange(0, 6, 2)}
+return type: f03_score
+searched until operator count: 1
+( A 0 0 ( x2 = 4.0 ) ) & ( P 1 1 ( ( x1 < 2.0 ) & ( x0 > 3.0 ) ) )
+fp: 0 fn: 643 tp: 217 tn: 940 precision: 1.0 recall: 0.252325581395
+f1 score: 0.402971216342 f0.5 score: 0.627893518519 f0.9 score: 0.429914623468
+f0.1 score: 0.97149822695 f0.15 score: 0.938787814682 f0.2 score: 0.89769291965 f0.3 score: 0.803430706522
+f0.4 score: 0.709870276368
+Done 0
+Done 1
+Done 2
+Done 3
+Done 4
+Done 5
+Done 6
+Done 7
+Done 8
+Done 9
+Done 10
+Done 11
+Done 12
+Done 13
+Done 14
+Done 15
+Done 16
+Done 17
+Done 18
+Done 19
+Controller construction done. Prevented 1029 violation occasions.
+There were no possible modes left for a controller input for 0 times.
+label count after controller 2 is: 878
+
+Process finished with exit code 0

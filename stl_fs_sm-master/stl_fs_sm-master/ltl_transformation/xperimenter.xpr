@@ -1,0 +1,36 @@
+experiment experiment{
+	 desc "description";
+	 objective COMPARATIVE;
+	 design design;
+	 simulation simulation;
+	 analysis AnovaAnalysis;
+	 visual DEFAULT;
+	 target KEPLER;
+}
+variable x0: INTEGER group FACTOR [0, 40.0];
+variable x1: INTEGER group FACTOR [0, 40.0];
+variable x2: INTEGER group FACTOR [0, 40.0];
+variable x3: INTEGER group FACTOR [0, 20.0];
+variable x4: INTEGER group FACTOR [0, 20.0];
+variable x5: INTEGER group FACTOR [0, 20.0];
+variable x6: BOOLEAN group RESPONSE;
+variable x7: BOOLEAN group RESPONSE;
+design design{
+	 method FULLFACTORIAL;
+	 varlist x0 x1 x2 x3 x4 x5 x6 x7 ;
+}
+simulation simulation{
+	 modelFile /traffic_data_l6/;
+	 modelType DISCRETEEVENT;
+	 inport x0:  x0;
+	 inport x1:  x1;
+	 inport x2:  x2;
+	 inport x3:  x3;
+	 inport x4:  x4;
+	 inport x5:  x5;
+	 inport x6:  x6;
+	 inport x7:  x7;
+}
+analysis AnovaAnalysis{
+	 file "http://ceng.metu.edu.tr/~e1564178/xperimenter/anova-service";
+}

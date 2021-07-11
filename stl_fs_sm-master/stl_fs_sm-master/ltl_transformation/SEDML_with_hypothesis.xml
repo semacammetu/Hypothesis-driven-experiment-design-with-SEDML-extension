@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sedML xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://sed-ml.org/" level="1" version="1">
+  <listOfHypotheses>
+		<hypothesis metaid="H0">
+		        <listOfExpressions>
+				<expression expr="h1 > 3048">
+					<temporalOperator opr="P[1, 1]" />
+				</expression>
+      			</listOfExpressions>
+			<listOfConditions>
+				<condition metaid="C1">
+					<temporalOperator opr="P[1, 1]" />
+					<expression expr="h1 > 1500"/>
+					<operator opr="and"/>
+					<expression expr="j > 3000"/>
+					<operator opr="and"/>
+					<expression expr="k > 50"/>
+				</condition>
+			 	<condition metaid="C2">
+					<temporalOperator opr="P[1, 1]" />
+					<expression expr="h1 > 2500"/>
+					<operator opr="and"/>
+					<expression expr="j > 3000"/>
+				</condition>
+			 	<condition metaid="C3">
+					<temporalOperator opr="P[1, 1]" />
+					<expression expr="h3 < 900"/>
+					<operator opr="and"/>
+					<expression expr="j > 3000"/>
+					<operator opr="and"/>
+					<expression expr="k > 50"/>
+			        </condition>
+			</listOfConditions>
+			<referenceModel model="model"/>
+		</hypothesis>
+		<hypothesis metaid="H1">
+		        <listOfExpressions>
+				<expression expr="h1 <= 3048">
+					<temporalOperator opr="P[1, 1]" />
+				</expression>
+      			</listOfExpressions>
+		</hypothesis>
+		<listOfRelations>
+			<relation relation="CONTRADICT">
+				<hypothesis hyp="H0"/>
+				<hypothesis hyp="H1"/>
+			</relation>
+		</listOfRelations>
+	</listOfHypotheses>
+
+  <listOfSimulations>
+    <uniformTimeCourse initialTime="0" outputStartTime="0" outputEndTime="100" numberOfPoints="1000" id="simulation">
+      <algorithm kisaoID="KISAO:0000088" />
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+      <model metaid="model" source="/sourceModel" />
+  </listOfModels>
+  <listOfTasks>
+    <task simulationReference="simulation" modelReference="model" id="task" />
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="timeDG" name="timeDG">
+      <listOfVariables>
+        <variable id="time" name="time" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>time</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="h1DG" name="h1DG">
+      <listOfVariables>
+        <variable id="h1" name="h1" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>h1</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="h3DG" name="h3DG">
+      <listOfVariables>
+        <variable id="h3" name="h3" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>h3</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="jDG" name="jDG">
+      <listOfVariables>
+        <variable id="j" name="j" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>j</math:ci>
+      </math:math>
+    </dataGenerator>
+    <dataGenerator id="kDG" name="kDG">
+      <listOfVariables>
+        <variable id="k5" name="k5" taskReference="task" />
+      </listOfVariables>
+      <math:math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math:ci>k5</math:ci>
+      </math:math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="plot1_Basic">
+      <listOfCurves>
+        <curve id="h1DG" logX="false" logY="false" xDataReference="timeDG" yDataReference="h1DG" />
+        <curve id="h3DG" logX="false" logY="false" xDataReference="timeDG" yDataReference="h3DG" />
+        <curve id="jDG" logX="false" logY="false" xDataReference="timeDG" yDataReference="jDG" />
+        <curve id="kDG" logX="false" logY="false" xDataReference="timeDG" yDataReference="kDG" />
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

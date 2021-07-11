@@ -10,6 +10,32 @@ def generateSimulation(listOfSimulations):
     ET.SubElement(uniformTimeCourses, "algorithm", attrib=algorithmAttr)
 
 
+def generateHypothesis(listOfHypothesis, optimized_formula1, optimized_formula2, optimized_formula3):
+    hypothesis1 = ET.SubElement(listOfHypothesis, "hypothesis")
+    hypothesis2 = ET.SubElement(listOfHypothesis, "hypothesis")
+    temporalOp1 = optimized_formula1.split(0, 5)
+    exprOp1 = optimized_formula1.split(5, 20)
+    conditionAttr1 = {"metaid": "C1", "expr": exprOp1, "temporal operator": temporalOp1}
+    temporalOp2 = optimized_formula2.split(0, 5)
+    exprOp2 = optimized_formula2.split(5, 20)
+    conditionAttr2 = {"metaid": "C2", "expr": exprOp2, "temporal operator": temporalOp2}
+    temporalOp3 = optimized_formula3.split(0, 5)
+    exprOp3 = optimized_formula3.split(5, 20)
+    conditionAttr3 = {"metaid": "C3", "expr": exprOp3, "temporal operator": temporalOp3}
+
+    listOfConditions = ET.SubElement(hypothesis1, "listOfConditions")
+    ET.SubElement(listOfConditions, "condition", attrib=conditionAttr1)
+    ET.SubElement(listOfConditions, "condition", attrib=conditionAttr2)
+    ET.SubElement(listOfConditions, "condition", attrib=conditionAttr3)
+
+    listOfExpressions = ET.SubElement(hypothesis1, "listOfExpressions")
+    expressionAttr1 = {"expr": exprOp1, "temporal operator": temporalOp1}
+    ET.SubElement(listOfExpressions, "expression", attrib=expressionAttr1)
+
+    listOfRelations = ET.SubElement(listOfHypothesis, "listOfRelations")
+    relationAttr1 = {"relation": "CONTRADICT", "hyp": hypothesis1, "hyp": hypothesis2}
+    ET.SubElement(listOfRelations, "relation", attrib=relationAttr1)
+
 def generateModel(listOfModels):
     modelAttribute = {"id": "model", "language": "urn:sedml:language:sbml",
                       "source": "urn:miriam:biomodels.db:BIOMD0000000021"}
@@ -61,10 +87,13 @@ def generateListOfOutputs(listOfOutputs, systemVariables):
         ET.SubElement(listOfCurves, "curve", attrib=curveAttr)
 
 
-def generateSedML(systemVariables):
+def generateSedML(systemVariables, optimized_formula1, optimized_formula2, optimized_formula3):
     sedmlAttr = {"xmlns:math": "http://www.w3.org/1998/Math/MathML",
                  "xmlns": "http://sed-ml.org/", "level": "1", "version": "1"}
     root = ET.Element("sedML", attrib=sedmlAttr)
+
+    listOfHypothesis = ET.SubElement(root, "listOfHypothesis")
+    generateHypothesis(listOfHypothesis, optimized_formula1, optimized_formula2, optimized_formula3)
 
     listOfSimulations = ET.SubElement(root, "listOfSimulations")
     generateSimulation(listOfSimulations)
@@ -85,7 +114,8 @@ def generateSedML(systemVariables):
     indent(root)
 
     # writing xml
-    tree.write("D:/CASE STUDY/ptSTL/stl_fs_sm-master/stl_fs_sm-master/ltl_transformation/sedml.xml", encoding="utf-8",
+    tree.write("D:/CASE STUDY/ptSTL/stl_fs_sm-master/stl_fs_sm-master/ltl_transformation/SEDML_with_hypothesis.xml",
+               encoding="utf-8",
                xml_declaration=True)
-    with open("D:/CASE STUDY/ptSTL/stl_fs_sm-master/stl_fs_sm-master/ltl_transformation/sedml.xml", 'r') as fin:
+    with open("/ltl_transformation/SEDML_with_hypothesis.xml", 'r') as fin:
         print(fin.read())

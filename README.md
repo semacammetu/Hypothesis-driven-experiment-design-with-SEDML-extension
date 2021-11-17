@@ -85,7 +85,7 @@ ow supervises the complete list of
 experiment procedures sequentially; specically, design, execution, validation, and
 analysis.
 
-#1.2. Hypothesis to Experiment Model Transformations
+# 1.2. Hypothesis to Experiment Model Transformations
 Following the fulllment of the user operations for the system under study, Hypothesis
 2 Experiment Transformator module, i.e., the primary step in Figure 5, initiates the
 simulation experiment work
@@ -124,14 +124,14 @@ task,
 (2) A map for hospital capacities: transformed into variable limits,
 (3) Hypotheses: transformed into list of hypotheses.
 
-System specications SED-ML
+System specifications SED-ML
 2 hypotheses listOfHypotheses
 1 default initial values for a single simulation listOfSimulations
 1 default initial values for a single model listOfModels
 1 default initial values for a single task listOfTasks
-2 system specication listOfDataGenerators
+2 system specification listOfDataGenerators
 
-Table 2. User-dened specications to SED-ML Mapping
+Table 2. User-defined specifications to SED-ML Mapping
 
 For the sake of simplicity and readability of the SED-ML model, we only presented
 the extended listOfHypotheses for a single variable part of the generated SED-ML

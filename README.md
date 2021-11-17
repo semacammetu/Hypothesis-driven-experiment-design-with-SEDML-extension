@@ -280,3 +280,18 @@ We opted for a humble statistical search to scrutinize the utilized datasets in 
 The execution of the analysis produces graphical throughput in Figure 3. The throughput highlights that in every five trace intervals for the aggregated dataset, there exist two or more traces that refute the hypothesis. Bear in mind that the graphic depicts the aggregation of the 4 different datasets where each dataset contains 101 traces. Explained differently, approximately 1 traces in 101 traces disprove the hypothesis, and the analysis outcome is considerably close to our experiment result for the refuting cases. The significance of this analysis for the data quality can be assumed marginal regarding the aim of the study, i.e., having a complete work ow for the simulation experiment.
 
 Figure 3. Time traces of the hospital capacities that refute the hypothesis
+
+C_ am, S., Day_ba_s, O., Gorur, B.K., O_guztuzun, H., Yilmaz, L., Chakladar, S., Doud, K., Smith,
+A.E., and Teran-Somohano, A., Supporting simulation experiments with megamodeling. In
+Proceedings of the 6th International Conference on Model-Driven Engineering and Software
+Development - Volume 1: MODELSWARD,, pages 372{378. INSTICC, Sciteress, 2018.
+TTB ANKARA TABP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021,
+from https://ato.org.tr/_les/documents/ATO
+T.C. Saglik Bakanligi. COVID-19 Durum Raporu. Retrieved May 5, 2021, from
+https://covid19.saglik.gov.tr/TR-68443/covid-19-durum-raporu.html
+
+Republic of Turkey Ministry of Health (2021). COVID-19 Information Page, General
+Coronavirus Table. Retrieved May 6, 2021, from https://covid19.saglik.gov.tr/EN-
+69532/general-coronavirus-table.html.
+Ergurtuna, M., and Aydin Gol, E., An e_cient formula synthesis method with past signal
+temporal logic, 2019.

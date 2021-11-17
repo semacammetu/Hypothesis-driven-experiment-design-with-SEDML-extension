@@ -9,10 +9,7 @@ The Hospital Bed Availability study is modeled based on the hospitals in the cap
 Figure 1. Selected hospitals with Covid-19 services in Ankara
 
 As we propose to study predictive analysis on hospital bed availability, we stipulated two main required data: First is the bed capacity of each hospital, second is the daily
-number of hospitalized COVID-19 patients in Turkey. However, as of being the capital city of Turkey and its location, hospitals in Ankara also admit patients from other
-cities due to its hospital capacity. Therefore, a third parameter for the number of COVID-19 patients from neighbor cities are added to the study. Additionally, a state
-vector retains the number of daily bed occupancy of each hospital i, the number of daily COVID-19 patients j, and the daily number of admitted COVID-19 patients from
-the neighbor cities k at a certain state. We denote the daily number of bed occupancy hi on each hospital i.
+number of hospitalized COVID-19 patients in Turkey. However, as of being the capital city of Turkey and its location, hospitals in Ankara also admit patients from other cities due to its hospital capacity. Therefore, a third parameter for the number of COVID-19 patients from neighbor cities are added to the study. Additionally, a state vector retains the number of daily bed occupancy of each hospital i, the number of daily COVID-19 patients j, and the daily number of admitted COVID-19 patients from the neighbor cities k at a certain state. We denote the daily number of bed occupancy hi on each hospital i.
 
 The capacity of the hospitals is given in Table 1. The capacity of the hospitals is 117, 3810, 300, 1150, 115, and 480, respectively. Considering the capacity of the Bilkent
 Sehir Hastanesi, the hospital becomes the major center where it should raise an alert in case of fullness. Finally, a hospital is considered to be over capacity by having many

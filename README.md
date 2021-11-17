@@ -281,17 +281,9 @@ The execution of the analysis produces graphical throughput in Figure 3. The thr
 
 Figure 3. Time traces of the hospital capacities that refute the hypothesis
 
-C_ am, S., Day_ba_s, O., Gorur, B.K., O_guztuzun, H., Yilmaz, L., Chakladar, S., Doud, K., Smith,
-A.E., and Teran-Somohano, A., Supporting simulation experiments with megamodeling. In
-Proceedings of the 6th International Conference on Model-Driven Engineering and Software
-Development - Volume 1: MODELSWARD,, pages 372{378. INSTICC, Sciteress, 2018.
-TTB ANKARA TABP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021,
-from https://ato.org.tr/_les/documents/ATO
-T.C. Saglik Bakanligi. COVID-19 Durum Raporu. Retrieved May 5, 2021, from
-https://covid19.saglik.gov.tr/TR-68443/covid-19-durum-raporu.html
-
-Republic of Turkey Ministry of Health (2021). COVID-19 Information Page, General
-Coronavirus Table. Retrieved May 6, 2021, from https://covid19.saglik.gov.tr/EN-
-69532/general-coronavirus-table.html.
-Ergurtuna, M., and Aydin Gol, E., An e_cient formula synthesis method with past signal
-temporal logic, 2019.
+# REFERENCES
+1) Cam, S., Dayibas, O., Gorur, B.K., O_guztuzun, H., Yilmaz, L., Chakladar, S., Doud, K., Smith, A.E., and Teran-Somohano, A., Supporting simulation experiments with megamodeling. In Proceedings of the 6th International Conference on Model-Driven Engineering and Software Development - Volume 1: MODELSWARD,, pages 372{378. INSTICC, Sciteress, 2018.
+2) TTB ANKARA TABP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021, from https://ato.org.tr/_les/documents/ATO
+3) T.C. Saglik Bakanligi. COVID-19 Durum Raporu. Retrieved May 5, 2021, from https://covid19.saglik.gov.tr/TR-68443/covid-19-durum-raporu.html
+4) Republic of Turkey Ministry of Health (2021). COVID-19 Information Page, General Coronavirus Table. Retrieved May 6, 2021, from https://covid19.saglik.gov.tr/EN-69532/general-coronavirus-table.html.
+5) Ergurtuna, M., and Aydin Gol, E., An e_cient formula synthesis method with past signal temporal logic, 2019.

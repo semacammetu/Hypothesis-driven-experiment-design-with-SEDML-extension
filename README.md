@@ -1,11 +1,12 @@
 # A PREDICTIVE ANALYSIS OF HOSPITAL BED AVAILABILITY DURING COVID-19 PANDEMIC
 
-In order to gain a deeper understanding of a megamodel and the process for the hypothesis-driven experiment design [Cam, 2018], we opted for a current and simple study domain to degrade the complexity of the proposed system. We consider that a hospital bed availability prediction system serves excellent for this purpose based on its importance, especially during COVID-19 pandemic. A rise in the number of COVID-19 patients burdens hospitals and it is also a valid indicator of the necessity of taking further measures against the pandemic.
+In order to gain a deeper understanding of a megamodel and the process for the hypothesis-driven experiment design (Cam, 2018), we opted for a current and simple study domain to degrade the complexity of the proposed system. We consider that a hospital bed availability prediction system serves excellent for this purpose based on its importance, especially during COVID-19 pandemic. A rise in the number of COVID-19 patients burdens hospitals and it is also a valid indicator of the necessity of taking further measures against the pandemic.
 
 # 1.1. Hospital Bed Availability
 The Hospital Bed Availability study is modeled based on the hospitals in the capital city of Turkey, Ankara dedicated to serving the COVID-19 patients in Figure 1. There exist 6 hospitals and these hospitals are intentionally selected as they serve the most of the patients in Ankara. Authorities state that depending on the daily situation and their capacity, the hospitals transfer patients to the closest hospitals. For example, if the Bilkent Sehir Hastanesi gets filled up, the closest hospitals Ankara Gazi Universitesi Hastanesi and Sehit Sait Erturk Devlet Hastanesi will start to admit more patients than average, depending on the increase of daily COVID-19 patients. Thus, keeping the accurate number of occupancy and predicting the possible increase in the number of patients becomes quite important for the healthcare professionals.
 
 ![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig15.png)
+
 Figure 1. Selected hospitals with Covid-19 services in Ankara
 
 As we propose to study predictive analysis on hospital bed availability, we stipulated two main required data: First is the bed capacity of each hospital, second is the daily
@@ -24,10 +25,10 @@ patients over 80% of the capacity.
 | h4     	| Sehit Sait Erturk Devlet Hastanesi                     	| 115          	|
 | h5     	| Yeni Sincan Devlet Hastanesi                           	| 480          	|
   
-  Table 1. Selected hospitals with COVID-19 services in Ankara and their capacities [TTB, 2019]
+  Table 1. Selected hospitals with COVID-19 services in Ankara and their capacities (TTB, 2019)
 
 # 1.1.1. System Specification and Data Collection
-The identified hospital bed capacity system owns several specific features and constraints (e.g., the number of daily bed occupancy of each hospital and the overall capacity of the hospitals) defining the self and creating the recognized problem. Accordingly, those sets of specifications can be beneficial to introduce the system under investigation to the hypothesis-based experiment design workflow. The followings describe the fundamental specifications for the system under study. The capacity of the variables j and k were determined based on the total number of selected hospital capacities in Ankara multiplied by 10. The multiplication coefficient 10 represents the percentage of the daily number of hospitalized COVID-19 patients in Turkey, i.e., a maximum of 10% [T.C. Saglik Bakanligi, 2021].
+The identified hospital bed capacity system owns several specific features and constraints (e.g., the number of daily bed occupancy of each hospital and the overall capacity of the hospitals) defining the self and creating the recognized problem. Accordingly, those sets of specifications can be beneficial to introduce the system under investigation to the hypothesis-based experiment design workflow. The followings describe the fundamental specifications for the system under study. The capacity of the variables j and k were determined based on the total number of selected hospital capacities in Ankara multiplied by 10. The multiplication coefficient 10 represents the percentage of the daily number of hospitalized COVID-19 patients in Turkey, i.e., a maximum of 10% (T.C. Saglik Bakanligi, 2021).
 
 1. An integer array for the number of daily bed occupancy of each hospital, number of hospitalized COVID-19 patients in Turkey and number of admitted COVID-19 patients from neighbor cities counts: [0, 1, 2, 3, 4, 5, 6, 7],
 2. An integer array for the non-capacity factors that are numbers representing the number of hospitalized COVID-19 patients in Turkey and number of admitted COVID-19 patients from neighbor cities counts: [6, 7],
@@ -44,7 +45,7 @@ variables that are number of hospitalized COVID-19 patients in Turkey and number
 # 1.1.2. Hypotheses about Hospital Bed Availability in Ankara during COVID-19
 Hospital bed availability became one of the major concerns in many countries during the COVID-19 pandemic. Discovering the conditions causing this fatal problem, at least in Ankara, before it aggravates is the concern of this case study. Thus, we formulated our concern based on the previously established steps of the scientific process in the Introduction section, with an appropriate question addressing the problem and hypotheses targeting to solve the problem. Specifically, the formalized questions as ptSTL formulas describe the hypotheses.
 (1) Question: What are the conditions that originate fulness on hospital h1 on the next day? 
-(2) Conditions: The following conditions, defined according to the formal specification in Section 3.3.1 originate fullness on hospital h1 on the next day:
+(2) Conditions: The following conditions, defined according to the formal specification originate fullness on hospital h1 on the next day:
  = 1 _ 2 _ 3
 1 = P[1;1]((h1 > 1500) ^ (j > 3000) ^ (k > 50))	
 2 = P[1;1]((h1 > 2500) ^ (j > 3000))
@@ -61,7 +62,11 @@ Each sub-formula 1, 2 and 3 states a condition that leads to fullness on hosp
 (3) Null hypothesis (H0): If one of the condition occurs, then the hospital h1 observes fullness by growing 80% over its capacity where the condition is h1 > 3048:
 (4) Alternative hypothesis (H1): If one of the condition occurs, then the hospital h1 does not observe fullness by growing 80% over its capacity where the condition is h1 <= 3048:
 
-We assign our individual hypothesis-based experiment design work ow in Figure 5 for the remainder of the steps (4, 5, 6, and 7) of the scientific process. In the following sections, we explain how the work ow supervises the complete list of experiment procedures sequentially; specifically, design, execution, validation, and analysis.
+We assign our individual hypothesis-based experiment design work ow in Figure 2 for the remainder of the steps (4, 5, 6, and 7) of the scientific process. In the following sections, we explain how the work ow supervises the complete list of experiment procedures sequentially; specifically, design, execution, validation, and analysis.
+
+![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig10.png) 
+
+Figure 2. The Kepler workflow for hypothesis-based experiment design
 
 # 1.2. Hypothesis to Experiment Model Transformations
 Following the fulfillment of the user operations for the system under study, Hypothesis 2 Experiment Transformator module, i.e., the primary step in Figure 5, initiates the
@@ -76,7 +81,7 @@ The following sections explain the proposed hypothesis extension to SED-ML along
 
 # 1.2.1. Hypothesis Extension to SED-ML
 We propose a hypothesis extension to SED-ML to attain a solution for the lacking association issue between an experiment and its hypothesis. The proposed SED-ML
-model gracefully interprets the STL semantics into a markup language, i.e., XML. The followings claries how the user-defined system specification and the hypotheses describe the SED-ML model accordingly with Table 2. We set the default initial values for the SED-ML model generation with the fact that one experiment associated with a single task and an experiment model can suffciently prove or refute a list of hypotheses enclosed to a question.
+model gracefully interprets the STL semantics into a markup language, i.e., XML. The followings clarifies how the user-defined system specification and the hypotheses describe the SED-ML model accordingly with Table 2. We set the default initial values for the SED-ML model generation with the fact that one experiment associated with a single task and an experiment model can suffciently prove or refute a list of hypotheses enclosed to a question.
 1. An integer array for the number of daily bed occupancy of each hospital, the number of hospitalized COVID-19 patients, and admitted COVID-19 patients from the neighbor cities: transformed into variables in the data generator of a task,
 2. A map for hospital capacities: transformed into variable limits,
 3. Hypotheses: transformed into list of hypotheses.
@@ -91,7 +96,7 @@ model gracefully interprets the STL semantics into a markup language, i.e., XML.
 
 Table 2. User-defined specifications to SED-ML Mapping
 
-For the sake of simplicity and readability of the SED-ML model, we only presented the extended listOfHypotheses for a single variable part of the generated SED-ML model in the Listing 1.2.1. A hypothesis in SED-ML consists of an expression that defines the hypothesis, itself, and three conditions with multiple expressions, and the expression relations are defined with and for this specific example. The temporalOperators are P[1, 1] for each condition and expression. And, the relation entity is used to explain the hypothesis H0 with its conditions for refuting or proving, as there is a single hypothesis. It is important to note that H1 uses the same conditions with H0, as the relation between the hypotheses is CONTRADICT.
+For the sake of simplicity and readability of the SED-ML model, we only presented the extended listOfHypotheses for a single variable part of the generated SED-ML model in the Listing below. A hypothesis in SED-ML consists of an expression that defines the hypothesis, itself, and three conditions with multiple expressions, and the expression relations are defined with and for this specific example. The temporalOperators are P[1, 1] for each condition and expression. And, the relation entity is used to explain the hypothesis H0 with its conditions for refuting or proving, as there is a single hypothesis. It is important to note that H1 uses the same conditions with H0, as the relation between the hypotheses is CONTRADICT.
 Finally, H0 has a referenceModel that relates the expressions to an actual model.
 
 	1 <listOfHypotheses>
@@ -146,8 +151,8 @@ Finally, H0 has a referenceModel that relates the expressions to an actual model
 	50 </listOfModels>
 	
 # 1.2.2. SED-ML to Xperimenter Model Transformation
-The generation of another experiment model alongside the SED-ML is an essential effort to enrich the megamodel for the experimenters. The intention supporting this effort is to encourage the experimenters to develop their DSLs serving their particular needs, introduce them to the megamodel, and find common ground to bestow the knowledge. With this in mind, we undertook the Xperimenter model transformation from SED-ML, and achieved the Xperimenter model in the Listing 5.2.2. We opted to apply model transformation from SED-ML to Xperimenter rather than the STL to Xperimenter. Because the SED-ML specification represents a formal model for capturing the essentials of simulation experiments including hypotheses
-and this method improves the ability to create traceability to the lower models, i.e., Xperimenter. It is crucial to note that the STL formula dening the hypotheses was given as user input. In order to keep the originality of the Xperimenter model and as it was not a primary goal in this research, those inputs were not translated into Xperimenter and
+The generation of another experiment model alongside the SED-ML is an essential effort to enrich the megamodel for the experimenters. The intention supporting this effort is to encourage the experimenters to develop their DSLs serving their particular needs, introduce them to the megamodel, and find common ground to bestow the knowledge. With this in mind, we undertook the Xperimenter model transformation from SED-ML, and achieved the Xperimenter model in the Listing below. We opted to apply model transformation from SED-ML to Xperimenter rather than the STL to Xperimenter. Because the SED-ML specification represents a formal model for capturing the essentials of simulation experiments including hypotheses
+and this method improves the ability to create traceability to the lower models, i.e., Xperimenter. It is crucial to note that the STL formula defining the hypotheses was given as user input. In order to keep the originality of the Xperimenter model and as it was not a primary goal in this research, those inputs were not translated into Xperimenter and
 processed by the Python script in the following Experiment Execution section. 
 
 	1  experiment experiment{
@@ -197,29 +202,29 @@ design for Xperimenter.
 Table 3. SED-ML to Xperimenter Variable Mapping
 
 # 1.3. Experiment Execution
-Once achieving the experiment models, the execution phase of the experimentation process inaugurates the work ow for the execution. The experiment execution module, i.e., the second step in Figure 5, exclusively consists of a Python script that takes the generated data sets, the user-defined system specification, and the previously generated SED-ML model as inputs and determines the time traces that prove and refute the hypotheses. The script is fundamentally responsible for the following tasks:
+Once achieving the experiment models, the execution phase of the experimentation process inaugurates the workflow for the execution. The experiment execution module, i.e., the second step in Figure 2, exclusively consists of a Python script that takes the generated data sets, the user-defined system specification, and the previously generated SED-ML model as inputs and determines the time traces that prove and refute the hypotheses. The script is fundamentally responsible for the following tasks:
 1. Interpreting experiment model, i.e., SED-ML specification, to collect the hypotheses,
 2. Interpreting the data set on the basis of the system specifications,
 3. Executing the conditions against the data set to find the hypothesis proving and refuting time traces. 
 
-The experiment run accumulates throughputs for the number of successful and failing conditions, the overall number of time traces, the number of skipped data, and finally prints out the results in Figure 7. The screenshot precisely contains the following information:
+The experiment run accumulates throughputs for the number of successful and failing conditions, the overall number of time traces, the number of skipped data, and finally prints out the results in Figure 3. The screenshot precisely contains the following information:
 1. The number of time traces that successfully prove the conditions,
 2. The number of the filled h1 traces where previous traces refute the conditions,
 3. The number of non-fitting time traces that refute the conditions where the next trace is not over the capacity (h1 < 3048),
 4. The overall number of skipped time traces due to the non-fitting conditions for the hypotheses,
 5. The overall number of traces that the experiment used, excluding the first ten time traces in each dataset to enhance the quality of the input by eliminating the initial  randomized time traces.
-		
-# 1.4. Experiment Validation
-Trace analysis is a useful technique for verifying formal proofs. A trace checker analyses the traces and outlines any violations of the profiered formula. Due to its frugality and practicality of the method, employing a trace checker for STL specifications appears to be reasonable in terms of experiment result validation in this study. Taking that into consideration, we employed the STL Trace Checker [Ergurtuna and Gol, 2019] to validate the experiment output that we formerly conducted. The trace checker takes the previously stated conditions for the hospital bed availability analysis for the hospital h1 alongside the generated datasets and returns the proving and disproving data traces. The output of the STL Trace Checker appears to tally with our expectations for the number of the traces providing the conditions, i.e., 62, and the number of the traces the disproving the conditions, i.e., 4. 
 
 ![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig12.png)
 
-Figure 2. Hospital bed availability experiment result including the time steps with the hospital capacities that proving the hypothesis
+Figure 3. Hospital bed availability experiment result including the time steps with the hospital capacities that proving the hypothesis
+		
+# 1.4. Experiment Validation
+Trace analysis is a useful technique for verifying formal proofs. A trace checker analyses the traces and outlines any violations of the profiered formula. Due to its frugality and practicality of the method, employing a trace checker for STL specifications appears to be reasonable in terms of experiment result validation in this study. Taking that into consideration, we employed the STL Trace Checker (Ergurtuna and Gol, 2019) to validate the experiment output that we formerly conducted. The trace checker takes the previously stated conditions for the hospital bed availability analysis for the hospital h1 alongside the generated datasets and returns the proving and disproving data traces. The output of the STL Trace Checker appears to tally with our expectations for the number of the traces providing the conditions, i.e., 62, and the number of the traces the disproving the conditions, i.e., 4. 
 
 Based on the quantitative comparison of the throughputs from the STL Trace Checker and the experiment run we conducted, we also observed that the throughputs are consistent with the analysis reported by us. The compatibility of the analysis results demonstrates the adequacy of using a trace checker for the validation of formally specified hypotheses.
 
 # 1.5. Experiment Analysis
-The final phase of the scientific experimentation process is to evaluate the acquired throughputs with the help of prevalent analytical methods. These analytical techniques assist in collecting and modeling data in the process of decision making. We, hence, offer an STL based experiment statistical analysis software, embedded in the work ow as the final step in the Figure 5, that helps the experiment designers in their endeavour of data analysis. The proposed statistical analysis tool utilizes the statistical capabilities of the Python programming language.
+The final phase of the scientific experimentation process is to evaluate the acquired throughputs with the help of prevalent analytical methods. These analytical techniques assist in collecting and modeling data in the process of decision making. We, hence, offer an STL based experiment statistical analysis software, embedded in the work ow as the final step in the Figure 2, that helps the experiment designers in their endeavour of data analysis. The proposed statistical analysis tool utilizes the statistical capabilities of the Python programming language.
 The tool is capable of applying the following statistical methods on a given dataset:
 1. Proving or refuting an STL formula on a dataset,
 2. Applying the following statistical analysis:
@@ -230,15 +235,16 @@ We opted for a humble statistical search to scrutinize the utilized datasets in 
  = (1 _ 2 _ 3) ^ 4
 4 = P[1;1](h1next < 3048)
 
-The execution of the analysis produces graphical throughput in Figure 3. The throughput highlights that in every five trace intervals for the aggregated dataset, there exist two or more traces that refute the hypothesis. Bear in mind that the graphic depicts the aggregation of the 4 different datasets where each dataset contains 101 traces. Explained differently, approximately 1 traces in 101 traces disprove the hypothesis, and the analysis outcome is considerably close to our experiment result for the refuting cases. The significance of this analysis for the data quality can be assumed marginal regarding the aim of the study, i.e., having a complete work ow for the simulation experiment.
+The execution of the analysis produces graphical throughput in Figure 4. The throughput highlights that in every five trace intervals for the aggregated dataset, there exist two or more traces that refute the hypothesis. Bear in mind that the graphic depicts the aggregation of the 4 different datasets where each dataset contains 101 traces. Explained differently, approximately 1 traces in 101 traces disprove the hypothesis, and the analysis outcome is considerably close to our experiment result for the refuting cases. The significance of this analysis for the data quality can be assumed marginal regarding the aim of the study, i.e., having a complete work ow for the simulation experiment.
 
 
 ![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig13.png)
-Figure 3. Time traces of the hospital capacities that refute the hypothesis
+
+Figure 4. Time traces of the hospital capacities that refute the hypothesis
 
 # REFERENCES
-[Cam, 2018]: Cam, S., Dayibas, O., Gorur, B.K., Oguztuzun, H., Yilmaz, L., Chakladar, S., Doud, K., Smith, A.E., and Teran-Somohano, A., Supporting simulation experiments with megamodeling. In Proceedings of the 6th International Conference on Model-Driven Engineering and Software Development - Volume 1: MODELSWARD,, pages 372{378. INSTICC, Sciteress, 2018.
-[TTB, 2019]: TTB ANKARA TABP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021, from https://ato.org.tr/_les/documents/ATO 
-[T.C. Saglik Bakanligi, 2021]: T.C. Saglik Bakanligi. COVID-19 Durum Raporu. Retrieved May 5, 2021, from https://covid19.saglik.gov.tr/TR-68443/covid-19-durum-raporu.html
-[4]: Republic of Turkey Ministry of Health (2021). COVID-19 Information Page, General Coronavirus Table. Retrieved May 6, 2021, from https://covid19.saglik.gov.tr/EN-69532/general-coronavirus-table.html.
-[Ergurtuna and Gol, 2019]: Ergurtuna, M., and Aydin Gol, E., An e_cient formula synthesis method with past signal temporal logic, 2019.
+1. Cam, S., Dayibas, O., Gorur, B.K., Oguztuzun, H., Yilmaz, L., Chakladar, S., Doud, K., Smith, A.E., and Teran-Somohano, A., Supporting simulation experiments with megamodeling. In Proceedings of the 6th International Conference on Model-Driven Engineering and Software Development - Volume 1: MODELSWARD,, pages 372{378. INSTICC, Sciteress, 2018.
+2. TTB ANKARA TABP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021, from https://ato.org.tr/_les/documents/ATO 
+3. T.C. Saglik Bakanligi. COVID-19 Durum Raporu. Retrieved May 5, 2021, from https://covid19.saglik.gov.tr/TR-68443/covid-19-durum-raporu.html
+4. Republic of Turkey Ministry of Health (2021). COVID-19 Information Page, General Coronavirus Table. Retrieved May 6, 2021, from https://covid19.saglik.gov.tr/EN-69532/general-coronavirus-table.html.
+5. Ergurtuna, M., and Aydin Gol, E., An e_cient formula synthesis method with past signal temporal logic, 2019.

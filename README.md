@@ -25,7 +25,7 @@ patients over 80% of the capacity.
   
   Table 1. Selected hospitals with COVID-19 services in Ankara and their capacities (TTB, 2019)
 
-#1.1.1. System Specification and Data Collection
+# 1.1.1. System Specification and Data Collection
 The identified hospital bed capacity system owns several specific features and constraints (e.g., the number of daily bed occupancy of each hospital and the overall capacity of the hospitals) defining the self and creating the recognized problem. Accordingly, those sets of specifications can be beneficial to introduce the system under investigation to the hypothesis-based experiment design workflow. The followings describe the fundamental specifications for the system under study. The capacity of the variables j and k were determined based on the total number of selected hospital capacities in Ankara multiplied by 10. The multiplication coefficient 10 represents the percentage of the daily number of hospitalized COVID-19 patients in Turkey, i.e., a maximum of 10% (T.C. Saglik Bakanligi, 2021).
 
 (1) An integer array for the number of daily bed occupancy of each hospital, number of hospitalized COVID-19 patients in Turkey and number of admitted COVID-19 patients from neighbor cities counts: [0, 1, 2, 3, 4, 5, 6, 7],
@@ -42,7 +42,7 @@ The decisions about data generation made upon a requirement that the overall tim
 variables that are number of hospitalized COVID-19 patients in Turkey and number of admitted COVID-19 patients from neighbor cities. We eventually achieved 404 time traces representing the last 14 months of COVID-19, where 62 of the time traces have hospital h1 with over 80% capacity, i.e., h1 > 3048.
 
 
-1.1.2. Hypotheses about Hospital Bed Availability in Ankara during COVID-19
+# 1.1.2. Hypotheses about Hospital Bed Availability in Ankara during COVID-19
 Hospital bed availability became one of the major concerns in many countries during
 the COVID-19 pandemic. Discovering the conditions causing this fatal problem, at
 least in Ankara, before it aggravates is the concern of this case study. Thus, we
@@ -83,7 +83,7 @@ following sections, we explain how the work
 ow supervises the complete list of
 experiment procedures sequentially; specically, design, execution, validation, and
 analysis.
-1.2. Hypothesis to Experiment Model Transformations
+#1.2. Hypothesis to Experiment Model Transformations
 Following the fulllment of the user operations for the system under study, Hypothesis
 2 Experiment Transformator module, i.e., the primary step in Figure 5, initiates the
 simulation experiment work
@@ -106,7 +106,7 @@ The following sections explain the proposed hypothesis extension to SED-ML
 alongside the model generation, and SED-ML to Xperimenter model
 transformations, sequentially.
 
-1.2.1. Hypothesis Extension to SED-ML
+# 1.2.1. Hypothesis Extension to SED-ML
 We propose a hypothesis extension to SED-ML to attain a solution for the lacking
 association issue between an experiment and its hypothesis. The proposed SED-ML
 model gracefully interprets the STL semantics into a markup language, i.e., XML.
@@ -193,7 +193,7 @@ Finally, H0 has a referenceModel that relates the expressions to an actual model
 	49 			  <model metaid="model" source="/sourceModel" />
 	50 		</listOfModels>
 	
-1.2.2. SED-ML to Xperimenter Model Transformation
+# 1.2.2. SED-ML to Xperimenter Model Transformation
 The generation of another experiment model alongside the SED-ML is an essential
 eort to enrich the megamodel for the experimenters. The intention supporting this
 eort is to encourage the experimenters to develop their DSLs serving their particular
@@ -262,7 +262,7 @@ design for Xperimenter.
 	6 task.variable design.varList
 Table 3. SED-ML to Xperimenter Variable Mapping
 
-1.3. Experiment Execution
+# 1.3. Experiment Execution
 Once achieving the experiment models, the execution phase of the experimentation
 process inaugurates the work
 ow for the execution. The experiment execution module,
@@ -289,7 +289,7 @@ the hypotheses,
 time traces in each dataset to enhance the quality of the input by eliminating
 the initial randomized time traces.
 		
-1.4. Experiment Validation
+# 1.4. Experiment Validation
 Trace analysis is a useful technique for verifying formal proofs. A trace checker
 analyses the traces and outlines any violations of the proered formula. Due to its
 frugality and practicality of the method, employing a trace checker for STL
@@ -312,7 +312,7 @@ throughputs are consistent with the analysis reported by us. The compatibility o
 analysis results demonstrates the adequacy of using a trace checker for the validation
 of formally specied hypotheses.
 
-2.5. Experiment Analysis
+# 2.5. Experiment Analysis
 The nal phase of the scientic experimentation process is to evaluate the acquired
 throughputs with the help of prevalent analytical methods. These analytical
 techniques assist in collecting and modeling data in the process of decision making.

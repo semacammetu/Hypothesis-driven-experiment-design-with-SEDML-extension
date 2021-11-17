@@ -1,6 +1,6 @@
 # A PREDICTIVE ANALYSIS OF HOSPITAL BED AVAILABILITY DURING COVID-19 PANDEMIC
 
-In order to gain a deeper understanding of a megamodel and the process for the hypothesis-driven experiment design (Cam, 2018), we opted for a current and simple study domain to degrade the complexity of the proposed system. We consider that a hospital bed availability prediction system serves excellent for this purpose based on its importance, especially during COVID-19 pandemic.A rise in the number of COVID-19 patients burdens hospitals and it is also a valid indicator of the necessity of taking further measures against the pandemic.
+In order to gain a deeper understanding of a megamodel and the process for the hypothesis-driven experiment design (Cam, 2018), we opted for a current and simple study domain to degrade the complexity of the proposed system. We consider that a hospital bed availability prediction system serves excellent for this purpose based on its importance, especially during COVID-19 pandemic. A rise in the number of COVID-19 patients burdens hospitals and it is also a valid indicator of the necessity of taking further measures against the pandemic.
 
 # 1.1. Hospital Bed Availability
 The Hospital Bed Availability study is modeled based on the hospitals in the capital city of Turkey, Ankara dedicated to serving the COVID-19 patients in Figure 1. There exist 6 hospitals and these hospitals are intentionally selected as they serve the most of the patients in Ankara. Authorities state that depending on the daily situation and their capacity, the hospitals transfer patients to the closest hospitals. For example, if the Bilkent Sehir Hastanesi gets filled up, the closest hospitals Ankara Gazi Universitesi Hastanesi and Sehit Sait Erturk Devlet Hastanesi will start to admit more patients than average, depending on the increase of daily COVID-19 patients. Thus, keeping the accurate number of occupancy and predicting the possible increase in the number of patients becomes quite important for the healthcare professionals.
@@ -44,17 +44,9 @@ variables that are number of hospitalized COVID-19 patients in Turkey and number
 
 
 # 1.1.2. Hypotheses about Hospital Bed Availability in Ankara during COVID-19
-Hospital bed availability became one of the major concerns in many countries during
-the COVID-19 pandemic. Discovering the conditions causing this fatal problem, at
-least in Ankara, before it aggravates is the concern of this case study. Thus, we
-formulated our concern based on the previously established steps of the scientic
-process in the Introduction section, with an appropriate question addressing the
-problem and hypotheses targeting to solve the problem. Specically, the formalized
-questions as ptSTL formulas describe the hypotheses.
-(1) Question: What are the conditions that originate fulness on hospital h1 on the
-next day?
-(2) Conditions: The following conditions, dened according to the formal
-specication in Section 3.3.1 originate fullness on hospital h1 on the next day:
+Hospital bed availability became one of the major concerns in many countries during the COVID-19 pandemic. Discovering the conditions causing this fatal problem, at least in Ankara, before it aggravates is the concern of this case study. Thus, we formulated our concern based on the previously established steps of the scientific process in the Introduction section, with an appropriate question addressing the problem and hypotheses targeting to solve the problem. Specifically, the formalized questions as ptSTL formulas describe the hypotheses.
+(1) Question: What are the conditions that originate fulness on hospital h1 on the next day? 
+(2) Conditions: The following conditions, defined according to the formal specification in Section 3.3.1 originate fullness on hospital h1 on the next day:
  = 1 _ 2 _ 3
 1 = P[1;1]((h1 > 1500) ^ (j > 3000) ^ (k > 50))	
 2 = P[1;1]((h1 > 2500) ^ (j > 3000))

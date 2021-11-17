@@ -99,9 +99,9 @@ model obtaining in two ways: model generation and model transformation. For this
 study, we underline how we interpret these two similar tasks: while we describe the
 model transformations as a practice over two or more conventional models serving
 the same domain, e.g., DSLs, we contemplate the data generation as another practice
-between any custom specication. In light of this, Hypothesis 2 Experiment
+between any custom specification. In light of this, Hypothesis 2 Experiment
 Transformator practices the following functions:
-(1) From user-dened system specication to SED-ML model generation,
+(1) From user-defined system specification to SED-ML model generation,
 (2) From SED-ML to Xperimenter model transformation.
 The following sections explain the proposed hypothesis extension to SED-ML
 alongside the model generation, and SED-ML to Xperimenter model
@@ -253,14 +253,14 @@ equivalent to the same variables in Xperimenter. Having said that, while the tas
 representing the experiment, the dataGenerator and output collectively represents
 variable in Xperimenter. And, variable of the task are transformed into varList of
 design for Xperimenter.
-
-	SED-ML Xperimenter
-	1 model model
-	2 simulation simulation
-	3 task experiment
-	4 dataGenerator variable
-	5 output variable
-	6 task.variable design.varList
+|     SED-ML    	|   Xperimenter  	|
+|:-------------:	|:--------------:	|
+| model         	| model          	|
+| simulation    	| simulation     	|
+| task          	| experiment     	|
+| dataGenerator 	| variable       	|
+| output        	| variable       	|
+| task.variable 	| design.varList 	|
 Table 3. SED-ML to Xperimenter Variable Mapping
 
 # 1.3. Experiment Execution
@@ -278,11 +278,11 @@ hypotheses,
 refuting time traces.
 The experiment run accumulates throughputs for the number of successful and
 failing conditions, the overall number of time traces, the number of skipped data,
-and nally prints out the results in Figure 7. The screenshot precisely contains the
+and finally prints out the results in Figure 7. The screenshot precisely contains the
 following information:
 (1) The number of time traces that successfully prove the conditions,
-(2) The number of the lled h1 traces where previous traces refute the conditions,
-(3) The number of non-tting time traces that refute the conditions where the next
+(2) The number of the filled h1 traces where previous traces refute the conditions,
+(3) The number of non-fitting time traces that refute the conditions where the next
 trace is not over the capacity (h1 < 3048),
 (4) The overall number of skipped time traces due to the non-tting conditions for
 the hypotheses,
@@ -291,60 +291,24 @@ time traces in each dataset to enhance the quality of the input by eliminating
 the initial randomized time traces.
 		
 # 1.4. Experiment Validation
-Trace analysis is a useful technique for verifying formal proofs. A trace checker
-analyses the traces and outlines any violations of the proered formula. Due to its
-frugality and practicality of the method, employing a trace checker for STL
-specications appears to be reasonable in terms of experiment result validation in
-this study. Taking that into consideration, we employed the STL Trace Checker
-(Ergurtuna and Gol, 2019) to validate the experiment output that we formerly
-conducted. The trace checker takes the previously stated conditions for the hospital
-bed availability analysis for the hospital h1 alongside the generated datasets and
+Trace analysis is a useful technique for verifying formal proofs. A trace checker analyses the traces and outlines any violations of the profiered formula. Due to its frugality and practicality of the method, employing a trace checker for STL specifications appears to be reasonable in terms of experiment result validation in this study. Taking that into consideration, we employed the STL Trace Checker (Ergurtuna and Gol, 2019) to validate the experiment output that we formerly conducted. The trace checker takes the previously stated conditions for the hospital bed availability analysis for the hospital h1 alongside the generated datasets and returns the proving and disproving data traces. The output of the STL Trace Checker appears to tally with our expectations for the number of the traces providing the conditions, i.e., 62, and the number of the traces the disproving the conditions, i.e., 4. 
 
+Figure 2. Hospital bed availability experiment result including the time steps with the hospital capacities that proving the hypothesis
 
-Figure 2. Hospital bed availability experiment result including the time steps with the
-hospital capacities that proving the hypothesis
-returns the proving and disproving data traces. The output of the STL Trace
-Checker appears to tally with our expectations for the number of the traces
-providing the conditions, i.e., 62, and the number of the traces the disproving the
-conditions, i.e., 4.
-Based on the quantitative comparison of the throughputs from the STL Trace
-Checker and the experiment run we conducted, we also observed that the
-throughputs are consistent with the analysis reported by us. The compatibility of the
-analysis results demonstrates the adequacy of using a trace checker for the validation
-of formally specied hypotheses.
+Based on the quantitative comparison of the throughputs from the STL Trace Checker and the experiment run we conducted, we also observed that the throughputs are consistent with the analysis reported by us. The compatibility of the analysis results demonstrates the adequacy of using a trace checker for the validation of formally specified hypotheses.
 
 # 2.5. Experiment Analysis
-The nal phase of the scientic experimentation process is to evaluate the acquired
-throughputs with the help of prevalent analytical methods. These analytical
-techniques assist in collecting and modeling data in the process of decision making.
-We, hence, oer an STL based experiment statistical analysis software, embedded in
-the work
-ow as the nal step in the Figure 5, that helps the experiment designers in
-their endeavour of data analysis. The proposed statistical analysis tool utilizes the
-statistical capabilities of the Python programming language.
+The final phase of the scientific experimentation process is to evaluate the acquired throughputs with the help of prevalent analytical methods. These analytical techniques assist in collecting and modeling data in the process of decision making. We, hence, offer an STL based experiment statistical analysis software, embedded in the work ow as the final step in the Figure 5, that helps the experiment designers in their endeavour of data analysis. The proposed statistical analysis tool utilizes the statistical capabilities of the Python programming language.
 The tool is capable of applying the following statistical methods on a given dataset:
-(1) Proving or refuting an STL formula on a dataset,
-(2) Applying the following statistical analysis:
-(a) Histogram of data sets
-(b) Linear regression
-(c) Statistical summary
-We opted for a humble statistical search to scrutinize the utilized datasets in terms
-of the quality aspect, and for the illustration purposes of the oered analytical tool.
-To attain this objective, we revisit and expand the formerly exploited hypotheses
-specication with a condition where the hospital h1 has a number of patients less than
-80% of its capacity in the next trace.
+	(1) Proving or refuting an STL formula on a dataset,
+	(2) Applying the following statistical analysis:
+		(a) Histogram of data sets
+		(b) Linear regression
+		(c) Statistical summary
+We opted for a humble statistical search to scrutinize the utilized datasets in terms of the quality aspect, and for the illustration purposes of the offered analytical tool. To attain this objective, we revisit and expand the formerly exploited hypotheses specification with a condition where the hospital h1 has a number of patients less than 80% of its capacity in the next trace.
  = (1 _ 2 _ 3) ^ 4
 4 = P[1;1](h1next < 3048)
 
-The execution of the analysis produces graphical throughput in Figure 8. The
-throughput highlights that in every ve trace intervals for the aggregated dataset,
-there exist two or more traces that refute the hypothesis. Bear in mind that the
-graphic depicts the aggregation of the 4 dierent datasets where each dataset
-contains 101 traces. Explained dierently, approximately 1 traces in 101 traces
-disprove the hypothesis, and the analysis outcome is considerably close to our
-experiment result for the refuting cases. The signicance of this analysis for the data
-quality can be assumed marginal regarding the aim of the study, i.e., having a
-complete work
-ow for the simulation experiment.
+The execution of the analysis produces graphical throughput in Figure 3. The throughput highlights that in every five trace intervals for the aggregated dataset, there exist two or more traces that refute the hypothesis. Bear in mind that the graphic depicts the aggregation of the 4 different datasets where each dataset contains 101 traces. Explained differently, approximately 1 traces in 101 traces disprove the hypothesis, and the analysis outcome is considerably close to our experiment result for the refuting cases. The significance of this analysis for the data quality can be assumed marginal regarding the aim of the study, i.e., having a complete work ow for the simulation experiment.
 
 Figure 3. Time traces of the hospital capacities that refute the hypothesis

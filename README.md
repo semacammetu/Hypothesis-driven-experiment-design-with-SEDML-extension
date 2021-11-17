@@ -84,6 +84,7 @@ following sections, we explain how the work
 ow supervises the complete list of
 experiment procedures sequentially; specically, design, execution, validation, and
 analysis.
+
 #1.2. Hypothesis to Experiment Model Transformations
 Following the fulllment of the user operations for the system under study, Hypothesis
 2 Experiment Transformator module, i.e., the primary step in Figure 5, initiates the
@@ -195,29 +196,17 @@ Finally, H0 has a referenceModel that relates the expressions to an actual model
 	50 		</listOfModels>
 	
 # 1.2.2. SED-ML to Xperimenter Model Transformation
-The generation of another experiment model alongside the SED-ML is an essential
-eort to enrich the megamodel for the experimenters. The intention supporting this
-eort is to encourage the experimenters to develop their DSLs serving their particular
-needs, introduce them to the megamodel, and nd common ground to bestow the
-knowledge. With this in mind, we undertook the Xperimenter model transformation
-from SED-ML, and achieved the Xperimenter model in the Listing 5.2.2.
-We opted to apply model transformation from SED-ML to Xperimenter rather
-than the STL to Xperimenter. Because the SED-ML specication represents a formal
-model for capturing the essentials of simulation experiments including hypotheses
-and this method improves the ability to create traceability to the lower models, i.e.,
-Xperimenter.
-It is crucial to note that the STL formula dening the hypotheses was given as user
-input. In order to keep the originality of the Xperimenter model and as it was not a
-primary goal in this research, those inputs were not translated into Xperimenter and
+The generation of another experiment model alongside the SED-ML is an essential effort to enrich the megamodel for the experimenters. The intention supporting this effort is to encourage the experimenters to develop their DSLs serving their particular needs, introduce them to the megamodel, and find common ground to bestow the knowledge. With this in mind, we undertook the Xperimenter model transformation from SED-ML, and achieved the Xperimenter model in the Listing 5.2.2. We opted to apply model transformation from SED-ML to Xperimenter rather than the STL to Xperimenter. Because the SED-ML specification represents a formal model for capturing the essentials of simulation experiments including hypotheses
+and this method improves the ability to create traceability to the lower models, i.e., Xperimenter. It is crucial to note that the STL formula dening the hypotheses was given as user input. In order to keep the originality of the Xperimenter model and as it was not a primary goal in this research, those inputs were not translated into Xperimenter and
 processed by the Python script in the following Experiment Execution section. 
 
 	1 experiment experiment{
-	2 desc "predictive analysis on hospital bed availability";
-	3 objective COMPARATIVE;
-	4 design design;
-	5 simulation simulation;
-	6 visual DEFAULT;
-	7 target KEPLER;
+	2 	desc "predictive analysis on hospital bed availability";
+	3 	objective COMPARATIVE;
+	4 	design design;
+	5 	simulation simulation;
+	6 	visual DEFAULT;
+	7 	target KEPLER;
 	8 }
 	9 variable h0: INTEGER group FACTOR [0, 117];
 	10 variable h1: INTEGER group FACTOR [0, 3810];
@@ -228,20 +217,20 @@ processed by the Python script in the following Experiment Execution section.
 	15 variable j: INTEGER group FACTOR [0, 59720];
 	16 variable k: INTEGER group FACTOR [0, 59720];
 	17 design design{
-	18 method FULLFACTORIAL;
-	19 varlist h0 h1 h2 h3 h4 h5 j k ;
+	18 	method FULLFACTORIAL;
+	19 	varlist h0 h1 h2 h3 h4 h5 j k ;
 	20 }
 	21 simulation simulation{
-	22 modelFile /hospital_data/;
-	23 modelType DISCRETEEVENT;
-	24 inport h0: h0;
-	25 inport h1: h1;
-	26 inport h2: h2;
-	27 inport h3: h3;
-	28 inport h4: h4;
-	29 inport h5: h5;
-	30 inport j: j;
-	31 inport k: k;
+	22 	modelFile /hospital_data/;
+	23 	modelType DISCRETEEVENT;
+	24 	inport h0: h0;
+	25 	inport h1: h1;
+	26 	inport h2: h2;
+	27 	inport h3: h3;
+	28 	inport h4: h4;
+	29 	inport h5: h5;
+	30 	inport j: j;
+	31 	inport k: k;
 	32 }
 The model transformation from SED-ML to Xperimenter is a relatively
 straightforward duty as both of the SED-ML and Xperimenter models possess many
@@ -261,34 +250,21 @@ design for Xperimenter.
 | dataGenerator 	| variable       	|
 | output        	| variable       	|
 | task.variable 	| design.varList 	|
+
 Table 3. SED-ML to Xperimenter Variable Mapping
 
 # 1.3. Experiment Execution
-Once achieving the experiment models, the execution phase of the experimentation
-process inaugurates the work
-ow for the execution. The experiment execution module,
-i.e., the second step in Figure 5, exclusively consists of a Python script that takes the
-generated data sets, the user-dened system specication, and the previously generated
-SED-ML model as inputs and determines the time traces that prove and refute the
-hypotheses. The script is fundamentally responsible for the following tasks:
-(1) Interpreting experiment model, i.e., SED-ML specication, to collect the
-hypotheses,
-(2) Interpreting the data set on the basis of the system specications,
-(3) Executing the conditions against the data set to nd the hypothesis proving and
-refuting time traces.
-The experiment run accumulates throughputs for the number of successful and
-failing conditions, the overall number of time traces, the number of skipped data,
-and finally prints out the results in Figure 7. The screenshot precisely contains the
-following information:
+Once achieving the experiment models, the execution phase of the experimentation process inaugurates the work ow for the execution. The experiment execution module, i.e., the second step in Figure 5, exclusively consists of a Python script that takes the generated data sets, the user-dened system specification, and the previously generated SED-ML model as inputs and determines the time traces that prove and refute the hypotheses. The script is fundamentally responsible for the following tasks:
+(1) Interpreting experiment model, i.e., SED-ML specification, to collect the hypotheses,
+(2) Interpreting the data set on the basis of the system specifications,
+(3) Executing the conditions against the data set to find the hypothesis proving and refuting time traces. 
+
+The experiment run accumulates throughputs for the number of successful and failing conditions, the overall number of time traces, the number of skipped data, and finally prints out the results in Figure 7. The screenshot precisely contains the following information:
 (1) The number of time traces that successfully prove the conditions,
 (2) The number of the filled h1 traces where previous traces refute the conditions,
-(3) The number of non-fitting time traces that refute the conditions where the next
-trace is not over the capacity (h1 < 3048),
-(4) The overall number of skipped time traces due to the non-tting conditions for
-the hypotheses,
-(5) The overall number of traces that the experiment used, excluding the rst ten
-time traces in each dataset to enhance the quality of the input by eliminating
-the initial randomized time traces.
+(3) The number of non-fitting time traces that refute the conditions where the next trace is not over the capacity (h1 < 3048),
+(4) The overall number of skipped time traces due to the non-fitting conditions for the hypotheses,
+(5) The overall number of traces that the experiment used, excluding the first ten time traces in each dataset to enhance the quality of the input by eliminating the initial  randomized time traces.
 		
 # 1.4. Experiment Validation
 Trace analysis is a useful technique for verifying formal proofs. A trace checker analyses the traces and outlines any violations of the profiered formula. Due to its frugality and practicality of the method, employing a trace checker for STL specifications appears to be reasonable in terms of experiment result validation in this study. Taking that into consideration, we employed the STL Trace Checker (Ergurtuna and Gol, 2019) to validate the experiment output that we formerly conducted. The trace checker takes the previously stated conditions for the hospital bed availability analysis for the hospital h1 alongside the generated datasets and returns the proving and disproving data traces. The output of the STL Trace Checker appears to tally with our expectations for the number of the traces providing the conditions, i.e., 62, and the number of the traces the disproving the conditions, i.e., 4. 
@@ -297,7 +273,7 @@ Figure 2. Hospital bed availability experiment result including the time steps w
 
 Based on the quantitative comparison of the throughputs from the STL Trace Checker and the experiment run we conducted, we also observed that the throughputs are consistent with the analysis reported by us. The compatibility of the analysis results demonstrates the adequacy of using a trace checker for the validation of formally specified hypotheses.
 
-# 2.5. Experiment Analysis
+# 1.5. Experiment Analysis
 The final phase of the scientific experimentation process is to evaluate the acquired throughputs with the help of prevalent analytical methods. These analytical techniques assist in collecting and modeling data in the process of decision making. We, hence, offer an STL based experiment statistical analysis software, embedded in the work ow as the final step in the Figure 5, that helps the experiment designers in their endeavour of data analysis. The proposed statistical analysis tool utilizes the statistical capabilities of the Python programming language.
 The tool is capable of applying the following statistical methods on a given dataset:
 	(1) Proving or refuting an STL formula on a dataset,

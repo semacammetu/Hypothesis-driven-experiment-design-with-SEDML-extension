@@ -80,12 +80,13 @@ model gracefully interprets the STL semantics into a markup language, i.e., XML.
 (2) A map for hospital capacities: transformed into variable limits,
 (3) Hypotheses: transformed into list of hypotheses.
 
-System specifications SED-ML 
-2 hypotheses listOfHypotheses
-1 default initial values for a single simulation listOfSimulations
-1 default initial values for a single model listOfModels
-1 default initial values for a single task listOfTasks
-2 system specification listOfDataGenerators
+| System specifications 	|                          SED-ML                          	|
+|:---------------------:	|:--------------------------------------------------------:	|
+| hypotheses            	| listOfHypotheses                                         	|
+| default               	| initial values for a single simulation listOfSimulations 	|
+| default               	| initial values for a single model listOfModels           	|
+| default               	| initial values for a single task listOfTasks             	|
+| system specification  	| listOfDataGenerators                                     	|
 
 Table 2. User-defined specifications to SED-ML Mapping
 

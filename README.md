@@ -53,9 +53,13 @@ Hospital bed availability became one of the major concerns in many countries dur
 3 = P[1;1]((h3 > 900) ^ (j > 3000) ^ (k > 50))
 												
 Each sub-formula 1, 2 and 3 states a condition that leads to fullness on hospital h1 on the next day.
+
  1 : on the occasion of more than 1500 patients at hospital h1, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara,
+
  2 : on the occasion of more than 2500 patients at hospital h1 and the number of hospitalized COVID-19 patients is more than 3000, 
+
  3 : on the occasion of more than 900 patients at hospital h3, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara.
+
 (3) Null hypothesis (H0): If one of the condition occurs, then the hospital h1 observes fullness by growing 80% over its capacity where the condition is h1 > 3048:
 (4) Alternative hypothesis (H1): If one of the condition occurs, then the hospital h1 does not observe fullness by growing 80% over its capacity where the condition is h1 <= 3048:
 
@@ -149,15 +153,15 @@ The generation of another experiment model alongside the SED-ML is an essential 
 and this method improves the ability to create traceability to the lower models, i.e., Xperimenter. It is crucial to note that the STL formula dening the hypotheses was given as user input. In order to keep the originality of the Xperimenter model and as it was not a primary goal in this research, those inputs were not translated into Xperimenter and
 processed by the Python script in the following Experiment Execution section. 
 
-	1 experiment experiment{
+	1  experiment experiment{
 	2 	desc "predictive analysis on hospital bed availability";
 	3 	objective COMPARATIVE;
 	4 	design design;
 	5 	simulation simulation;
 	6 	visual DEFAULT;
 	7 	target KEPLER;
-	8 }
-	9 variable h0: INTEGER group FACTOR [0, 117];
+	8  }
+	9  variable h0: INTEGER group FACTOR [0, 117];
 	10 variable h1: INTEGER group FACTOR [0, 3810];
 	11 variable h2: INTEGER group FACTOR [0, 300];
 	12 variable h3: INTEGER group FACTOR [0, 1150];
@@ -211,6 +215,8 @@ The experiment run accumulates throughputs for the number of successful and fail
 # 1.4. Experiment Validation
 Trace analysis is a useful technique for verifying formal proofs. A trace checker analyses the traces and outlines any violations of the profiered formula. Due to its frugality and practicality of the method, employing a trace checker for STL specifications appears to be reasonable in terms of experiment result validation in this study. Taking that into consideration, we employed the STL Trace Checker (Ergurtuna and Gol, 2019) to validate the experiment output that we formerly conducted. The trace checker takes the previously stated conditions for the hospital bed availability analysis for the hospital h1 alongside the generated datasets and returns the proving and disproving data traces. The output of the STL Trace Checker appears to tally with our expectations for the number of the traces providing the conditions, i.e., 62, and the number of the traces the disproving the conditions, i.e., 4. 
 
+
+![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig12.png)
 Figure 2. Hospital bed availability experiment result including the time steps with the hospital capacities that proving the hypothesis
 
 Based on the quantitative comparison of the throughputs from the STL Trace Checker and the experiment run we conducted, we also observed that the throughputs are consistent with the analysis reported by us. The compatibility of the analysis results demonstrates the adequacy of using a trace checker for the validation of formally specified hypotheses.
@@ -229,6 +235,8 @@ We opted for a humble statistical search to scrutinize the utilized datasets in 
 
 The execution of the analysis produces graphical throughput in Figure 3. The throughput highlights that in every five trace intervals for the aggregated dataset, there exist two or more traces that refute the hypothesis. Bear in mind that the graphic depicts the aggregation of the 4 different datasets where each dataset contains 101 traces. Explained differently, approximately 1 traces in 101 traces disprove the hypothesis, and the analysis outcome is considerably close to our experiment result for the refuting cases. The significance of this analysis for the data quality can be assumed marginal regarding the aim of the study, i.e., having a complete work ow for the simulation experiment.
 
+
+![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig13.png)
 Figure 3. Time traces of the hospital capacities that refute the hypothesis
 
 # REFERENCES

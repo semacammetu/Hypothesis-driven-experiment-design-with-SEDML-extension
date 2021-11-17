@@ -112,7 +112,7 @@ transformations, sequentially.
 We propose a hypothesis extension to SED-ML to attain a solution for the lacking
 association issue between an experiment and its hypothesis. The proposed SED-ML
 model gracefully interprets the STL semantics into a markup language, i.e., XML.
-The followings claries how the user-dened system specication and the hypotheses
+The followings claries how the user-dened system specification and the hypotheses
 describe the SED-ML model accordingly with Table 2. We set the default initial values
 for the SED-ML model generation with the fact that one experiment associated with a
 single task and an experiment model can suciently prove or refute a list of hypotheses

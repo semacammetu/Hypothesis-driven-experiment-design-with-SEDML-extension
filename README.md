@@ -15,13 +15,14 @@ The capacity of the hospitals is given in Table 1. The capacity of the hospitals
 Sehir Hastanesi, the hospital becomes the major center where it should raise an alert in case of fullness. Finally, a hospital is considered to be over capacity by having many
 patients over 80% of the capacity.
 
-  |Number| Hospital Name|Bed Capacity|Bed Capacity|
-	|h0|Ankara Gazi Universitesi Hastanesi|117|
-	|h1|Bilkent Sehir Hastanesi|3810|
-	|h2|Diskapi Yildirim Beyazit Egitim ve Arastirma Hastanesi|300|
-	|h3| Gulhane education and research hospital|1150|
-	|h4| Sehit Sait Erturk Devlet Hastanesi|115|
-	|h5| Yeni Sincan Devlet Hastanesi|480|
+| Number 	|                      Hospital Name                     	| Bed Capacity 	|
+|:------:	|:------------------------------------------------------:	|:------------:	|
+| h0     	| Ankara Gazi Universitesi Hastanesi                     	| 117          	|
+| h1     	| Bilkent Sehir Hastanesi                                	| 3810         	|
+| h2     	| Diskapi Yildirim Beyazit Egitim ve Arastirma Hastanesi 	| 300          	|
+| h3     	| Gulhane education and research hospital                	| 1150         	|
+| h4     	| Sehit Sait Erturk Devlet Hastanesi                     	| 115          	|
+| h5     	| Yeni Sincan Devlet Hastanesi                           	| 480          	|
   
   Table 1. Selected hospitals with COVID-19 services in Ankara and their capacities (TTB, 2019)
 

@@ -52,71 +52,35 @@ Hospital bed availability became one of the major concerns in many countries dur
 2 = P[1;1]((h1 > 2500) ^ (j > 3000))
 3 = P[1;1]((h3 > 900) ^ (j > 3000) ^ (k > 50))
 												
-Each sub-formula 1, 2 and 3 states a condition that leads to fullness on
-hospital h1 on the next day.
- 1 : on the occasion of more than 1500 patients at hospital h1, the number
-of hospitalized COVID-19 patients is more than 3000, and more than 50
-patients get transfered to Ankara,
- 2 : on the occasion of more than 2500 patients at hospital h1 and the
-number of hospitalized COVID-19 patients is more than 3000,
- 3 : on the occasion of more than 900 patients at hospital h3, the number
-of hospitalized COVID-19 patients is more than 3000, and more than 50
-patients get transfered to Ankara.
-(3) Null hypothesis (H0): If one of the condition occurs, then the hospital h1
-observes fullness by growing 80% over its capacity where the condition is
-											h1 > 3048:
-(4) Alternative hypothesis (H1): If one of the condition occurs, then the hospital
-h1 does not observe fullness by growing 80% over its capacity where the condition
-is
-h1 <= 3048:
-We assign our individual hypothesis-based experiment design work
-ow in Figure 5
-for the remainder of the steps (4, 5, 6, and 7) of the scientic process. In the
-following sections, we explain how the work
-ow supervises the complete list of
-experiment procedures sequentially; specically, design, execution, validation, and
+Each sub-formula 1, 2 and 3 states a condition that leads to fullness on hospital h1 on the next day.
+ 1 : on the occasion of more than 1500 patients at hospital h1, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara,
+ 2 : on the occasion of more than 2500 patients at hospital h1 and the number of hospitalized COVID-19 patients is more than 3000, 
+ 3 : on the occasion of more than 900 patients at hospital h3, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara.
+(3) Null hypothesis (H0): If one of the condition occurs, then the hospital h1 observes fullness by growing 80% over its capacity where the condition is h1 > 3048:
+(4) Alternative hypothesis (H1): If one of the condition occurs, then the hospital h1 does not observe fullness by growing 80% over its capacity where the condition is h1 <= 3048:
+
+We assign our individual hypothesis-based experiment design work ow in Figure 5 for the remainder of the steps (4, 5, 6, and 7) of the scientic process. In the following sections, we explain how the work ow supervises the complete list of experiment procedures sequentially; specifically, design, execution, validation, and
 analysis.
 
 # 1.2. Hypothesis to Experiment Model Transformations
-Following the fulllment of the user operations for the system under study, Hypothesis
-2 Experiment Transformator module, i.e., the primary step in Figure 5, initiates the
-simulation experiment work
-ow. Having the system specications and the hypotheses
-is the compulsory provision to employ the tasks for SED-ML model generation from
-system specication and from SED-ML to Xperimenter model transformation. It is
-pertinent to remark that generated datasets are only necessary for the later phases of
-the work
-ow, e.g., experiment execution.
-The module, an individualized Python script, is solely liable for the experiment
-model obtaining in two ways: model generation and model transformation. For this
-study, we underline how we interpret these two similar tasks: while we describe the
-model transformations as a practice over two or more conventional models serving
-the same domain, e.g., DSLs, we contemplate the data generation as another practice
-between any custom specification. In light of this, Hypothesis 2 Experiment
-Transformator practices the following functions:
+Following the fulfillment of the user operations for the system under study, Hypothesis 2 Experiment Transformator module, i.e., the primary step in Figure 5, initiates the
+simulation experiment workflow. Having the system specifications and the hypotheses is the compulsory provision to employ the tasks for SED-ML model generation from system specification and from SED-ML to Xperimenter model transformation. It is pertinent to remark that generated datasets are only necessary for the later phases of
+the work ow, e.g., experiment execution. 
+
+The module, an individualized Python script, is solely liable for the experiment model obtaining in two ways: model generation and model transformation. For this study, we underline how we interpret these two similar tasks: while we describe the model transformations as a practice over two or more conventional models serving the same domain, e.g., DSLs, we contemplate the data generation as another practice between any custom specification. In light of this, Hypothesis 2 Experiment Transformator practices the following functions:
 (1) From user-defined system specification to SED-ML model generation,
 (2) From SED-ML to Xperimenter model transformation.
-The following sections explain the proposed hypothesis extension to SED-ML
-alongside the model generation, and SED-ML to Xperimenter model
-transformations, sequentially.
+
+The following sections explain the proposed hypothesis extension to SED-ML alongside the model generation, and SED-ML to Xperimenter model transformations, sequentially.
 
 # 1.2.1. Hypothesis Extension to SED-ML
-We propose a hypothesis extension to SED-ML to attain a solution for the lacking
-association issue between an experiment and its hypothesis. The proposed SED-ML
-model gracefully interprets the STL semantics into a markup language, i.e., XML.
-The followings claries how the user-dened system specification and the hypotheses
-describe the SED-ML model accordingly with Table 2. We set the default initial values
-for the SED-ML model generation with the fact that one experiment associated with a
-single task and an experiment model can suciently prove or refute a list of hypotheses
-enclosed to a question.
-(1) An integer array for the number of daily bed occupancy of each hospital, the
-number of hospitalized COVID-19 patients, and admitted COVID-19 patients
-from the neighbor cities: transformed into variables in the data generator of a
-task,
+We propose a hypothesis extension to SED-ML to attain a solution for the lacking association issue between an experiment and its hypothesis. The proposed SED-ML
+model gracefully interprets the STL semantics into a markup language, i.e., XML. The followings claries how the user-dened system specification and the hypotheses describe the SED-ML model accordingly with Table 2. We set the default initial values for the SED-ML model generation with the fact that one experiment associated with a single task and an experiment model can suffciently prove or refute a list of hypotheses enclosed to a question.
+(1) An integer array for the number of daily bed occupancy of each hospital, the number of hospitalized COVID-19 patients, and admitted COVID-19 patients from the neighbor cities: transformed into variables in the data generator of a task,
 (2) A map for hospital capacities: transformed into variable limits,
 (3) Hypotheses: transformed into list of hypotheses.
 
-System specifications SED-ML
+System specifications SED-ML 
 2 hypotheses listOfHypotheses
 1 default initial values for a single simulation listOfSimulations
 1 default initial values for a single model listOfModels
@@ -125,67 +89,59 @@ System specifications SED-ML
 
 Table 2. User-defined specifications to SED-ML Mapping
 
-For the sake of simplicity and readability of the SED-ML model, we only presented
-the extended listOfHypotheses for a single variable part of the generated SED-ML
-model in the Listing 5.2.1. A hypothesis in SED-ML consists of an expression that
-denes the hypothesis, itself, and three conditions with multiple expressions, and the
-expression relations are dened with and for this specic example. The
-temporalOperators are P[1, 1] for each condition and expression. And, the relation
-entity is used to explain the hypothesis H0 with its conditions for refuting or
-proving, as there is a single hypothesis. It is important to note that H1 uses the
-same conditions with H0, as the relation between the hypotheses is CONTRADICT.
+For the sake of simplicity and readability of the SED-ML model, we only presented the extended listOfHypotheses for a single variable part of the generated SED-ML model in the Listing 1.2.1. A hypothesis in SED-ML consists of an expression that defines the hypothesis, itself, and three conditions with multiple expressions, and the expression relations are defined with and for this specific example. The temporalOperators are P[1, 1] for each condition and expression. And, the relation entity is used to explain the hypothesis H0 with its conditions for refuting or proving, as there is a single hypothesis. It is important to note that H1 uses the same conditions with H0, as the relation between the hypotheses is CONTRADICT.
 Finally, H0 has a referenceModel that relates the expressions to an actual model.
 
-	1		<listOfHypotheses>
-	2			<hypothesis metaid="H0">
-	3				<listOfExpressions>
-	4				<expression expr="h1 > 3048">
-	5					<temporalOperator opr="P[1, 1]" />
-	6				</expression>
-	7					</listOfExpressions>
-	8				<listOfConditions>
-	9 				<condition metaid="C1">
-	10 					<temporalOperator opr="P[1, 1]" />
-	11					<expression expr="h1 > 1500"/>
-	12 					<operator opr="and"/>
-	13 					<expression expr="j > 3000"/>
-	14 					<operator opr="and"/>
-	15 					<expression expr="k > 50"/>
+	1 <listOfHypotheses>
+	2 	<hypothesis metaid="H0">
+	3		<listOfExpressions>
+	4			<expression expr="h1 > 3048">
+	5				<temporalOperator opr="P[1, 1]" />
+	6			</expression>
+	7		</listOfExpressions>
+	8		<listOfConditions>
+	9 			<condition metaid="C1">
+	10 				<temporalOperator opr="P[1, 1]" />
+	11				<expression expr="h1 > 1500"/>
+	12 				<operator opr="and"/>
+	13 				<expression expr="j > 3000"/>
+	14 				<operator opr="and"/>
+	15 				<expression expr="k > 50"/>
 	16 			</condition>
 	17 			<condition metaid="C2">
-	18 				   <temporalOperator opr="P[1, 1]" />
-	19 				   <expression expr="h1 > 2500"/>
-	20 				   <operator opr="and"/>
-	21 				   <expression expr="j > 3000"/>
-	22			 </condition>
-	23			 <condition metaid="C3">
-	24				  <temporalOperator opr="P[1, 1]" />
-	25				  <expression expr="h3 < 900"/>
-	26 				  <operator opr="and"/>
-	27				  <expression expr="j > 3000"/>
-	28				  <operator opr="and"/>
-	29				  <expression expr="k > 50"/>
-	30 					 </condition>
-	31 			</listOfConditions>
-	32 			<referenceModel model="model"/>
-	33 		</hypothesis>
-	34		<hypothesis metaid="H1">
-	35 				 <listOfExpressions>
-	36 			   <expression expr="h1 <= 3048">
+	18 				<temporalOperator opr="P[1, 1]" />
+	19 				<expression expr="h1 > 2500"/>
+	20 				<operator opr="and"/>
+	21 				<expression expr="j > 3000"/>
+	22		 	</condition>
+	23			<condition metaid="C3">
+	24				<temporalOperator opr="P[1, 1]" />
+	25				<expression expr="h3 < 900"/>
+	26 				<operator opr="and"/>
+	27				<expression expr="j > 3000"/>
+	28				<operator opr="and"/>
+	29		        	<expression expr="k > 50"/>
+	30 			</condition>
+	31 		</listOfConditions>
+	32 		<referenceModel model="model"/>
+	33 	</hypothesis>
+	34	<hypothesis metaid="H1">
+	35 		<listOfExpressions>
+	36 			<expression expr="h1 <= 3048">
 	37				  <temporalOperator opr="P[1, 1]" />
-	38 			   </expression>
-	39 				 </listOfExpressions>
-	40 	      </hypothesis>
-	41		  <listOfRelations>
-	42			 <relation relation="CONTRADICT">
-	43 				<hypothesis hyp="H0"/>
-	44				<hypothesis hyp="H1"/>
-	45  	     </relation>
-	46 		  </listOfRelations>
-	47 		</listOfHypotheses>
-	48		<listOfModels>
-	49 			  <model metaid="model" source="/sourceModel" />
-	50 		</listOfModels>
+	38 			</expression>
+	39 		</listOfExpressions>
+	40 	</hypothesis>
+	41	<listOfRelations>
+	42		<relation relation="CONTRADICT">
+	43 			<hypothesis hyp="H0"/>
+	44			<hypothesis hyp="H1"/>
+	45  	     	</relation>
+	46 	</listOfRelations>
+	47 </listOfHypotheses>
+	48 <listOfModels>
+	49 	<model metaid="model" source="/sourceModel" />
+	50 </listOfModels>
 	
 # 1.2.2. SED-ML to Xperimenter Model Transformation
 The generation of another experiment model alongside the SED-ML is an essential effort to enrich the megamodel for the experimenters. The intention supporting this effort is to encourage the experimenters to develop their DSLs serving their particular needs, introduce them to the megamodel, and find common ground to bestow the knowledge. With this in mind, we undertook the Xperimenter model transformation from SED-ML, and achieved the Xperimenter model in the Listing 5.2.2. We opted to apply model transformation from SED-ML to Xperimenter rather than the STL to Xperimenter. Because the SED-ML specification represents a formal model for capturing the essentials of simulation experiments including hypotheses
@@ -224,16 +180,9 @@ processed by the Python script in the following Experiment Execution section.
 	30 	inport j: j;
 	31 	inport k: k;
 	32 }
-The model transformation from SED-ML to Xperimenter is a relatively
-straightforward duty as both of the SED-ML and Xperimenter models possess many
-mutual variables. Table 3 summarizes the variable mapping eort from SED-ML to
-Xperimenter. An Xperimenter model starts with an experiment specication
-containing a description, an objective, a design, a simulation, an analysis, a visual
-and a target information. The model and simulation variables from SED-ML is
-equivalent to the same variables in Xperimenter. Having said that, while the task is
-representing the experiment, the dataGenerator and output collectively represents
-variable in Xperimenter. And, variable of the task are transformed into varList of
+The model transformation from SED-ML to Xperimenter is a relatively straightforward duty as both of the SED-ML and Xperimenter models possess many mutual variables. Table 3 summarizes the variable mapping effort from SED-ML to Xperimenter. An Xperimenter model starts with an experiment specification containing a description, an objective, a design, a simulation, an analysis, a visual and a target information. The model and simulation variables from SED-ML is equivalent to the same variables in Xperimenter. Having said that, while the task is representing the experiment, the dataGenerator and output collectively represents variable in Xperimenter. And, variable of the task are transformed into varList of
 design for Xperimenter.
+
 |     SED-ML    	|   Xperimenter  	|
 |:-------------:	|:--------------:	|
 | model         	| model          	|
@@ -282,7 +231,7 @@ The execution of the analysis produces graphical throughput in Figure 3. The thr
 Figure 3. Time traces of the hospital capacities that refute the hypothesis
 
 # REFERENCES
-1) Cam, S., Dayibas, O., Gorur, B.K., O_guztuzun, H., Yilmaz, L., Chakladar, S., Doud, K., Smith, A.E., and Teran-Somohano, A., Supporting simulation experiments with megamodeling. In Proceedings of the 6th International Conference on Model-Driven Engineering and Software Development - Volume 1: MODELSWARD,, pages 372{378. INSTICC, Sciteress, 2018.
+1) Cam, S., Dayibas, O., Gorur, B.K., Oguztuzun, H., Yilmaz, L., Chakladar, S., Doud, K., Smith, A.E., and Teran-Somohano, A., Supporting simulation experiments with megamodeling. In Proceedings of the 6th International Conference on Model-Driven Engineering and Software Development - Volume 1: MODELSWARD,, pages 372{378. INSTICC, Sciteress, 2018.
 2) TTB ANKARA TABP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021, from https://ato.org.tr/_les/documents/ATO
 3) T.C. Saglik Bakanligi. COVID-19 Durum Raporu. Retrieved May 5, 2021, from https://covid19.saglik.gov.tr/TR-68443/covid-19-durum-raporu.html
 4) Republic of Turkey Ministry of Health (2021). COVID-19 Information Page, General Coronavirus Table. Retrieved May 6, 2021, from https://covid19.saglik.gov.tr/EN-69532/general-coronavirus-table.html.

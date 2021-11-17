@@ -29,13 +29,10 @@ patients over 80% of the capacity.
 # 1.1.1. System Specification and Data Collection
 The identified hospital bed capacity system owns several specific features and constraints (e.g., the number of daily bed occupancy of each hospital and the overall capacity of the hospitals) defining the self and creating the recognized problem. Accordingly, those sets of specifications can be beneficial to introduce the system under investigation to the hypothesis-based experiment design workflow. The followings describe the fundamental specifications for the system under study. The capacity of the variables j and k were determined based on the total number of selected hospital capacities in Ankara multiplied by 10. The multiplication coefficient 10 represents the percentage of the daily number of hospitalized COVID-19 patients in Turkey, i.e., a maximum of 10% (T.C. Saglik Bakanligi, 2021).
 
-(1) An integer array for the number of daily bed occupancy of each hospital, number of hospitalized COVID-19 patients in Turkey and number of admitted COVID-19 patients from neighbor cities counts: [0, 1, 2, 3, 4, 5, 6, 7],
-
-(2) An integer array for the non-capacity factors that are numbers representing the number of hospitalized COVID-19 patients in Turkey and number of admitted COVID-19 patients from neighbor cities counts: [6, 7],
-
-(3) A map for all the hospitals with their capacity: 'h0': [60, 117], 'h1': [1905,3810], 'h2': [150, 300], 'h3': [575, 1150], 'h4': [57, 115], 'h5': [240, 480], 'j':['0', '59720'], 'k': ['0', '59720'],
-
-(4) A formula to trace the non-fitting time traces of the hospitals calculated with the multiplication of its capacity and the capacity fullness ratio, i.e., 80% (e.g., h1 < 3048)
+1. An integer array for the number of daily bed occupancy of each hospital, number of hospitalized COVID-19 patients in Turkey and number of admitted COVID-19 patients from neighbor cities counts: [0, 1, 2, 3, 4, 5, 6, 7],
+2. An integer array for the non-capacity factors that are numbers representing the number of hospitalized COVID-19 patients in Turkey and number of admitted COVID-19 patients from neighbor cities counts: [6, 7],
+3. A map for all the hospitals with their capacity: 'h0': [60, 117], 'h1': [1905,3810], 'h2': [150, 300], 'h3': [575, 1150], 'h4': [57, 115], 'h5': [240, 480], 'j':['0', '59720'], 'k': ['0', '59720'],
+4. A formula to trace the non-fitting time traces of the hospitals calculated with the multiplication of its capacity and the capacity fullness ratio, i.e., 80% (e.g., h1 < 3048)
 
 Unfortunately, we found the acquisition of authentic test data difficult as they are not shared per city by the Turkish authorities. This impediment motivated us toward data generation alternatives for the prevalent problem domain, i.e., hospital bed availability during COVID-19. Therefore, for the purpose of this study, a data generation algorithm that simulates a system under study from random initial states was employed to create data sets for the hospital bed availability in Ankara during COVID-19. The algorithm generates data for the daily number of the occupied beds of each hospital and the transferred number of patients from the neighboring cities. The generated data were randomized upon the COVID-19 numbers shared by the Republic of Turkey Ministry of Health (Republic of Turkey Ministry of Health, 2021), i.e., number of patients for today. We assumed that the hospitals had half of their capacity was already occupied by non-COVID-19 patients, when the pandemic has started. The algorithm essentially builds data sets from random initial conditions for a provided number of time traces. The data contains the temporal operator P(previously) and the time interval [0, 101]. Although valuable for generating lots of data, this algorithm has the disadvantage of generating relatively small non-fitting data.
 
@@ -72,17 +69,17 @@ simulation experiment workflow. Having the system specifications and the hypothe
 the work ow, e.g., experiment execution. 
 
 The module, an individualized Python script, is solely liable for the experiment model obtaining in two ways: model generation and model transformation. For this study, we underline how we interpret these two similar tasks: while we describe the model transformations as a practice over two or more conventional models serving the same domain, e.g., DSLs, we contemplate the data generation as another practice between any custom specification. In light of this, Hypothesis 2 Experiment Transformator practices the following functions:
-(1) From user-defined system specification to SED-ML model generation,
-(2) From SED-ML to Xperimenter model transformation.
+1. From user-defined system specification to SED-ML model generation,
+2. From SED-ML to Xperimenter model transformation.
 
 The following sections explain the proposed hypothesis extension to SED-ML alongside the model generation, and SED-ML to Xperimenter model transformations, sequentially.
 
 # 1.2.1. Hypothesis Extension to SED-ML
 We propose a hypothesis extension to SED-ML to attain a solution for the lacking association issue between an experiment and its hypothesis. The proposed SED-ML
 model gracefully interprets the STL semantics into a markup language, i.e., XML. The followings claries how the user-dened system specification and the hypotheses describe the SED-ML model accordingly with Table 2. We set the default initial values for the SED-ML model generation with the fact that one experiment associated with a single task and an experiment model can suffciently prove or refute a list of hypotheses enclosed to a question.
-(1) An integer array for the number of daily bed occupancy of each hospital, the number of hospitalized COVID-19 patients, and admitted COVID-19 patients from the neighbor cities: transformed into variables in the data generator of a task,
-(2) A map for hospital capacities: transformed into variable limits,
-(3) Hypotheses: transformed into list of hypotheses.
+1. An integer array for the number of daily bed occupancy of each hospital, the number of hospitalized COVID-19 patients, and admitted COVID-19 patients from the neighbor cities: transformed into variables in the data generator of a task,
+2. A map for hospital capacities: transformed into variable limits,
+3. Hypotheses: transformed into list of hypotheses.
 
 | System specifications 	|                          SED-ML                          	|
 |:---------------------:	|:--------------------------------------------------------:	|
@@ -201,20 +198,19 @@ Table 3. SED-ML to Xperimenter Variable Mapping
 
 # 1.3. Experiment Execution
 Once achieving the experiment models, the execution phase of the experimentation process inaugurates the work ow for the execution. The experiment execution module, i.e., the second step in Figure 5, exclusively consists of a Python script that takes the generated data sets, the user-dened system specification, and the previously generated SED-ML model as inputs and determines the time traces that prove and refute the hypotheses. The script is fundamentally responsible for the following tasks:
-(1) Interpreting experiment model, i.e., SED-ML specification, to collect the hypotheses,
-(2) Interpreting the data set on the basis of the system specifications,
-(3) Executing the conditions against the data set to find the hypothesis proving and refuting time traces. 
+1. Interpreting experiment model, i.e., SED-ML specification, to collect the hypotheses,
+2. Interpreting the data set on the basis of the system specifications,
+3. Executing the conditions against the data set to find the hypothesis proving and refuting time traces. 
 
 The experiment run accumulates throughputs for the number of successful and failing conditions, the overall number of time traces, the number of skipped data, and finally prints out the results in Figure 7. The screenshot precisely contains the following information:
-(1) The number of time traces that successfully prove the conditions,
-(2) The number of the filled h1 traces where previous traces refute the conditions,
-(3) The number of non-fitting time traces that refute the conditions where the next trace is not over the capacity (h1 < 3048),
-(4) The overall number of skipped time traces due to the non-fitting conditions for the hypotheses,
-(5) The overall number of traces that the experiment used, excluding the first ten time traces in each dataset to enhance the quality of the input by eliminating the initial  randomized time traces.
+1. The number of time traces that successfully prove the conditions,
+2. The number of the filled h1 traces where previous traces refute the conditions,
+3. The number of non-fitting time traces that refute the conditions where the next trace is not over the capacity (h1 < 3048),
+4. The overall number of skipped time traces due to the non-fitting conditions for the hypotheses,
+5. The overall number of traces that the experiment used, excluding the first ten time traces in each dataset to enhance the quality of the input by eliminating the initial  randomized time traces.
 		
 # 1.4. Experiment Validation
 Trace analysis is a useful technique for verifying formal proofs. A trace checker analyses the traces and outlines any violations of the profiered formula. Due to its frugality and practicality of the method, employing a trace checker for STL specifications appears to be reasonable in terms of experiment result validation in this study. Taking that into consideration, we employed the STL Trace Checker (Ergurtuna and Gol, 2019) to validate the experiment output that we formerly conducted. The trace checker takes the previously stated conditions for the hospital bed availability analysis for the hospital h1 alongside the generated datasets and returns the proving and disproving data traces. The output of the STL Trace Checker appears to tally with our expectations for the number of the traces providing the conditions, i.e., 62, and the number of the traces the disproving the conditions, i.e., 4. 
-
 
 ![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig12.png)
 Figure 2. Hospital bed availability experiment result including the time steps with the hospital capacities that proving the hypothesis
@@ -224,11 +220,11 @@ Based on the quantitative comparison of the throughputs from the STL Trace Check
 # 1.5. Experiment Analysis
 The final phase of the scientific experimentation process is to evaluate the acquired throughputs with the help of prevalent analytical methods. These analytical techniques assist in collecting and modeling data in the process of decision making. We, hence, offer an STL based experiment statistical analysis software, embedded in the work ow as the final step in the Figure 5, that helps the experiment designers in their endeavour of data analysis. The proposed statistical analysis tool utilizes the statistical capabilities of the Python programming language.
 The tool is capable of applying the following statistical methods on a given dataset:
-	(1) Proving or refuting an STL formula on a dataset,
-	(2) Applying the following statistical analysis:
-		(a) Histogram of data sets
-		(b) Linear regression
-		(c) Statistical summary
+1. Proving or refuting an STL formula on a dataset,
+2. Applying the following statistical analysis:
+	1. Histogram of data sets
+	2. Linear regression
+	3. Statistical summary
 We opted for a humble statistical search to scrutinize the utilized datasets in terms of the quality aspect, and for the illustration purposes of the offered analytical tool. To attain this objective, we revisit and expand the formerly exploited hypotheses specification with a condition where the hospital h1 has a number of patients less than 80% of its capacity in the next trace.
  = (1 _ 2 _ 3) ^ 4
 4 = P[1;1](h1next < 3048)

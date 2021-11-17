@@ -1,6 +1,6 @@
 # A PREDICTIVE ANALYSIS OF HOSPITAL BED AVAILABILITY DURING COVID-19 PANDEMIC
 
-In order to gain a deeper understanding of a megamodel and the process for the hypothesis-driven experiment design (Cam, 2018), we opted for a current and simple study domain to degrade the complexity of the proposed system. We consider that a hospital bed availability prediction system serves excellent for this purpose based on its importance, especially during COVID-19 pandemic. A rise in the number of COVID-19 patients burdens hospitals and it is also a valid indicator of the necessity of taking further measures against the pandemic.
+In order to gain a deeper understanding of a megamodel and the process for the hypothesis-driven experiment design [link][1], we opted for a current and simple study domain to degrade the complexity of the proposed system. We consider that a hospital bed availability prediction system serves excellent for this purpose based on its importance, especially during COVID-19 pandemic. A rise in the number of COVID-19 patients burdens hospitals and it is also a valid indicator of the necessity of taking further measures against the pandemic.
 
 # 1.1. Hospital Bed Availability
 The Hospital Bed Availability study is modeled based on the hospitals in the capital city of Turkey, Ankara dedicated to serving the COVID-19 patients in Figure 1. There exist 6 hospitals and these hospitals are intentionally selected as they serve the most of the patients in Ankara. Authorities state that depending on the daily situation and their capacity, the hospitals transfer patients to the closest hospitals. For example, if the Bilkent Sehir Hastanesi gets filled up, the closest hospitals Ankara Gazi Universitesi Hastanesi and Sehit Sait Erturk Devlet Hastanesi will start to admit more patients than average, depending on the increase of daily COVID-19 patients. Thus, keeping the accurate number of occupancy and predicting the possible increase in the number of patients becomes quite important for the healthcare professionals.
@@ -63,7 +63,7 @@ Each sub-formula 1, 2 and 3 states a condition that leads to fullness on hosp
 (3) Null hypothesis (H0): If one of the condition occurs, then the hospital h1 observes fullness by growing 80% over its capacity where the condition is h1 > 3048:
 (4) Alternative hypothesis (H1): If one of the condition occurs, then the hospital h1 does not observe fullness by growing 80% over its capacity where the condition is h1 <= 3048:
 
-We assign our individual hypothesis-based experiment design work ow in Figure 5 for the remainder of the steps (4, 5, 6, and 7) of the scientic process. In the following sections, we explain how the work ow supervises the complete list of experiment procedures sequentially; specifically, design, execution, validation, and
+We assign our individual hypothesis-based experiment design work ow in Figure 5 for the remainder of the steps (4, 5, 6, and 7) of the scientific process. In the following sections, we explain how the work ow supervises the complete list of experiment procedures sequentially; specifically, design, execution, validation, and
 analysis.
 
 # 1.2. Hypothesis to Experiment Model Transformations
@@ -240,8 +240,8 @@ The execution of the analysis produces graphical throughput in Figure 3. The thr
 Figure 3. Time traces of the hospital capacities that refute the hypothesis
 
 # REFERENCES
-1) Cam, S., Dayibas, O., Gorur, B.K., Oguztuzun, H., Yilmaz, L., Chakladar, S., Doud, K., Smith, A.E., and Teran-Somohano, A., Supporting simulation experiments with megamodeling. In Proceedings of the 6th International Conference on Model-Driven Engineering and Software Development - Volume 1: MODELSWARD,, pages 372{378. INSTICC, Sciteress, 2018.
-2) TTB ANKARA TABP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021, from https://ato.org.tr/_les/documents/ATO
-3) T.C. Saglik Bakanligi. COVID-19 Durum Raporu. Retrieved May 5, 2021, from https://covid19.saglik.gov.tr/TR-68443/covid-19-durum-raporu.html
-4) Republic of Turkey Ministry of Health (2021). COVID-19 Information Page, General Coronavirus Table. Retrieved May 6, 2021, from https://covid19.saglik.gov.tr/EN-69532/general-coronavirus-table.html.
-5) Ergurtuna, M., and Aydin Gol, E., An e_cient formula synthesis method with past signal temporal logic, 2019.
+[1]: Cam, S., Dayibas, O., Gorur, B.K., Oguztuzun, H., Yilmaz, L., Chakladar, S., Doud, K., Smith, A.E., and Teran-Somohano, A., Supporting simulation experiments with megamodeling. In Proceedings of the 6th International Conference on Model-Driven Engineering and Software Development - Volume 1: MODELSWARD,, pages 372{378. INSTICC, Sciteress, 2018.
+[2]: TTB ANKARA TABP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021, from https://ato.org.tr/_les/documents/ATO
+[3]: T.C. Saglik Bakanligi. COVID-19 Durum Raporu. Retrieved May 5, 2021, from https://covid19.saglik.gov.tr/TR-68443/covid-19-durum-raporu.html
+[4]: Republic of Turkey Ministry of Health (2021). COVID-19 Information Page, General Coronavirus Table. Retrieved May 6, 2021, from https://covid19.saglik.gov.tr/EN-69532/general-coronavirus-table.html.
+[5]: Ergurtuna, M., and Aydin Gol, E., An e_cient formula synthesis method with past signal temporal logic, 2019.

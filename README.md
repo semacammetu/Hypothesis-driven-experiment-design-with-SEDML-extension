@@ -46,13 +46,8 @@ Hospital bed availability became one of the major concerns in many countries dur
 2. **Conditions**: The following conditions, defined according to the formal specification originate fullness on hospital h1 on the next day:
 
 <p align="center">
-  <img width="600" height="400" src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig15.png" />
-</p>
-
-
-![equation](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/eq1.png)
-
-												
+  <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/eq1.png" />
+</p>												
 	Each sub-formula &theta;<sub>1, &theta;<sub>2 and &theta;<sub>3 states a condition that leads to fullness on hospital h1 on the next day.
 
 	* &theta;<sub>1 : on the occasion of more than 1500 patients at hospital h1, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara,
@@ -234,9 +229,10 @@ The tool is capable of applying the following statistical methods on a given dat
 	3. Statistical summary
 We opted for a humble statistical search to scrutinize the utilized datasets in terms of the quality aspect, and for the illustration purposes of the offered analytical tool. To attain this objective, we revisit and expand the formerly exploited hypotheses specification with a condition where the hospital h1 has a number of patients less than 80% of its capacity in the next trace.
 
-
-![equation](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/eq2.png)
-
+<p align="center">
+  <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/eq2.png" />
+</p>
+	
 The execution of the analysis produces graphical throughput in Figure 4. The throughput highlights that in every five trace intervals for the aggregated dataset, there exist two or more traces that refute the hypothesis. Bear in mind that the graphic depicts the aggregation of the 4 different datasets where each dataset contains 101 traces. Explained differently, approximately 1 traces in 101 traces disprove the hypothesis, and the analysis outcome is considerably close to our experiment result for the refuting cases. The significance of this analysis for the data quality can be assumed marginal regarding the aim of the study, i.e., having a complete work ow for the simulation experiment.
 
 <p align="center">

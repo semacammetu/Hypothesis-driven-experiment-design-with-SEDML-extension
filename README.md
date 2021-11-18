@@ -53,11 +53,11 @@ Hospital bed availability became one of the major concerns in many countries dur
 ![equation](http://www.sciweavers.org/tex2img.php?eq=%5C%5B%20%5Cphi_%7B1%7D%3DP_%7B%5B1%2C1%5D%7D%20%28%28h1%20%3E1500%29%20%5Cland%20%28j%20%3E3000%29%20%5Cland%20%28k%20%3E50%29%29%20%5C%5D%0A%5C%5B%20%5Cphi_%7B2%7D%3DP_%7B%5B1%2C1%5D%7D%20%28%28h1%20%3E2500%29%20%5Cland%20%28j%20%3E3000%29%29%20%5C%5D%0A%5C%5B%20%5Cphi_%7B3%7D%3DP_%7B%5B1%2C1%5D%7D%20%28%28h3%20%3E%20900%29%20%5Cland%20%28j%20%3E3000%29%20%5Cland%20%28k%20%3E50%29%29%20%5C%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 												
-	Each sub-formula &theta<sub>1, &theta<sub>2 and &theta<sub>3 states a condition that leads to fullness on hospital h1 on the next day.
+	Each sub-formula &theta;<sub>1, &theta;<sub>2 and &theta;<sub>3 states a condition that leads to fullness on hospital h1 on the next day.
 
-	* &theta<sub>1 : on the occasion of more than 1500 patients at hospital h1, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara,
-	* &theta<sub>2 : on the occasion of more than 2500 patients at hospital h1 and the number of hospitalized COVID-19 patients is more than 3000, 
-	* &theta<sub>3 : on the occasion of more than 900 patients at hospital h3, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara.
+	* &theta;<sub>1 : on the occasion of more than 1500 patients at hospital h1, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara,
+	* &theta;<sub>2 : on the occasion of more than 2500 patients at hospital h1 and the number of hospitalized COVID-19 patients is more than 3000, 
+	* &theta;<sub>3 : on the occasion of more than 900 patients at hospital h3, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara.
 
 3. **Null hypothesis (H0)**: If one of the condition occurs, then the hospital h1 observes fullness by growing 80% over its capacity where the condition is *h1 > 3048*.
 4. **Alternative hypothesis (H1)**: If one of the condition occurs, then the hospital h1 does not observe fullness by growing 80% over its capacity where the condition is *h1 <= 3048*.

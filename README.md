@@ -11,11 +11,11 @@ We will give an example to illustrate how to carry out our Hypothesis-driven Exp
 1.	The user creates a system model for the system under study and collects/generates data sets for the defined system. This system model consists of input and output variables, limits and intervals for these variables, and a tracing formula to mark the time traces of the model for the given hypothesis. The data sets should contain values for the input variables.
 2.	The user specifies a hypothesis for a system under study (e.g., hospital bed availability prediction), in a formally defined hypothesis language (e.g., STL specification).
 
-       When the user completes the system and hypothesis specification, our workflow for Hypothesis-driven Experiment Design takes action. The workflow handles the model transformation to create an experiment from the specified hypothesis, also manages the execution, validation, and analyses of the generated experiment. The followings explain the main modules that carry out the workflow:
-1.	Hypothesis 2 Experiment Transformator: is responsible for translating a formal language to an experiment specification (specifically, from ptSTL to Xperimenter model transformation, and SED-ML).
-2.	Experiment Executor: translates experiment specification into an executable, runs the executable and returns the throughputs (specifically, from Xperimenter to Kepler Workflow Management System).
-3.	STL Trace Checker: validates if the result of the experiment fits to the user-defined hypothesis, and finds the non-fitting time traces.
-4.	Analysis Tool Executor: enables analysis options for the user. 
+When the user completes the system and hypothesis specification, our workflow for Hypothesis-driven Experiment Design takes action. The workflow handles the model transformation to create an experiment from the specified hypothesis, also manages the execution, validation, and analyses of the generated experiment. The followings explain the main modules that carry out the workflow:
+1. Hypothesis 2 Experiment Transformator: is responsible for translating a formal language to an experiment specification (specifically, from ptSTL to Xperimenter model transformation, and SED-ML).
+2. Experiment Executor: translates experiment specification into an executable, runs the executable and returns the throughputs (specifically, from Xperimenter to Kepler Workflow Management System).
+3. STL Trace Checker: validates if the result of the experiment fits to the user-defined hypothesis, and finds the non-fitting time traces.
+4. Analysis Tool Executor: enables analysis options for the user. 
 
 
 # A PREDICTIVE ANALYSIS OF HOSPITAL BED AVAILABILITY DURING COVID-19 PANDEMIC

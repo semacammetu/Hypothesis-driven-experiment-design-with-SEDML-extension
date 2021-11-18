@@ -14,7 +14,7 @@ As we propose to study predictive analysis on hospital bed availability, we stip
 
 The capacity of the hospitals is given in Table 1. The capacity of the hospitals are 117, 3810, 300, 1150, 115, and 480, respectively. Considering the capacity of the Bilkent Sehir Hastanesi, the hospital becomes the major center where it should raise an alert in case of fullness. Finally, a hospital is considered to be over capacity by having many patients over 80% of the capacity.
 
-<p align="center">
+
 | Number 	|                      Hospital Name                     	| Bed Capacity 	|
 |:------:	|:------------------------------------------------------:	|:------------:	|
 | h0     	| Ankara Gazi Universitesi Hastanesi                     	| 117          	|
@@ -23,8 +23,8 @@ The capacity of the hospitals is given in Table 1. The capacity of the hospitals
 | h3     	| Gulhane education and research hospital                	| 1150         	|
 | h4     	| Sehit Sait Erturk Devlet Hastanesi                     	| 115          	|
 | h5     	| Yeni Sincan Devlet Hastanesi                           	| 480          	|
-</p>
-<p align="center">Table 1. Selected hospitals with COVID-19 services in Ankara and their capacities (TTB, 2019)</p>
+
+Table 1. Selected hospitals with COVID-19 services in Ankara and their capacities (TTB, 2019)</p>
 
 ### 1.1.1. System Specification and Data Collection
 The identified hospital bed capacity system owns several specific features and constraints (e.g., the number of daily bed occupancy of each hospital and the overall capacity of the hospitals) defining the self and creating the recognized problem. Accordingly, those sets of specifications can be beneficial to introduce the system under investigation to the hypothesis-based experiment design workflow. The followings describe the fundamental specifications for the system under study. The capacity of the variables *j* and *k* were determined based on the total number of selected hospital capacities in Ankara multiplied by 10. The multiplication coefficient 10 represents the percentage of the daily number of hospitalized COVID-19 patients in Turkey, i.e., a maximum of 10% (T.C. Saglik Bakanligi, 2021).
@@ -81,7 +81,7 @@ model gracefully interprets the STL semantics into a markup language, i.e., XML.
 1. An integer array for the number of daily bed occupancy of each hospital, the number of hospitalized COVID-19 patients, and admitted COVID-19 patients from the neighbor cities: transformed into variables in the data generator of a task,
 2. A map for hospital capacities: transformed into variable limits,
 3. Hypotheses: transformed into list of hypotheses.
-<p align="center">
+
 | System specifications 	|                          SED-ML                          	|
 |:---------------------:	|:--------------------------------------------------------:	|
 | hypotheses            	| listOfHypotheses                                         	|
@@ -89,7 +89,6 @@ model gracefully interprets the STL semantics into a markup language, i.e., XML.
 | default               	| initial values for a single model listOfModels           	|
 | default               	| initial values for a single task listOfTasks             	|
 | system specification  	| listOfDataGenerators                                     	|
-</p>
 <p align="center">Table 2. User-defined specifications to SED-ML Mapping</p>
 
 For the sake of simplicity and readability of the SED-ML model, we only presented the extended listOfHypotheses for a single variable part of the generated SED-ML model in the Listing below. A hypothesis in SED-ML consists of an expression that defines the hypothesis, itself, and three conditions with multiple expressions, and the expression relations are defined with and for this specific example. The temporalOperators are *P[1, 1]* for each condition and expression. And, the relation entity is used to explain the hypothesis H0 with its conditions for refuting or proving, as there is a single hypothesis. It is important to note that H1 uses the same conditions with H0, as the relation between the hypotheses is *CONTRADICT*.
@@ -185,7 +184,7 @@ The generation of another experiment model alongside the SED-ML is an essential 
 ~~~~
 
 The model transformation from SED-ML to Xperimenter is a relatively straightforward duty as both of the SED-ML and Xperimenter models possess many mutual variables. Table 3 summarizes the variable mapping effort from SED-ML to Xperimenter. An Xperimenter model starts with an experiment specification containing a description, an objective, a design, a simulation, an analysis, a visual and a target information. The model and simulation variables from SED-ML is equivalent to the same variables in Xperimenter. Having said that, while the task is representing the experiment, the dataGenerator and output collectively represents variable in Xperimenter. And, variable of the task are transformed into varList of design for Xperimenter.
-<p align="center">
+
 |     SED-ML    	|   Xperimenter  	|
 |:-------------:	|:--------------:	|
 | model         	| model          	|
@@ -194,7 +193,6 @@ The model transformation from SED-ML to Xperimenter is a relatively straightforw
 | dataGenerator 	| variable       	|
 | output        	| variable       	|
 | task.variable 	| design.varList 	|
-</p>
 <p align="center">Table 3. SED-ML to Xperimenter Variable Mapping</p>
 
 ## 1.3. Experiment Execution

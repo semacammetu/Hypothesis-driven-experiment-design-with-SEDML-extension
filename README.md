@@ -44,24 +44,24 @@ variables that are number of hospitalized COVID-19 patients in Turkey and number
 
 # 1.1.2. Hypotheses about Hospital Bed Availability in Ankara during COVID-19
 Hospital bed availability became one of the major concerns in many countries during the COVID-19 pandemic. Discovering the conditions causing this fatal problem, at least in Ankara, before it aggravates is the concern of this case study. Thus, we formulated our concern based on the previously established steps of the scientific process in the Introduction section, with an appropriate question addressing the problem and hypotheses targeting to solve the problem. Specifically, the formalized questions as ptSTL formulas describe the hypotheses.
-(1) Question: What are the conditions that originate fulness on hospital h1 on the next day? 
-(2) Conditions: The following conditions, defined according to the formal specification originate fullness on hospital h1 on the next day:
+1. Question: What are the conditions that originate fulness on hospital h1 on the next day? 
+2. Conditions: The following conditions, defined according to the formal specification originate fullness on hospital h1 on the next day:
 
 ![equation](http://www.sciweavers.org/tex2img.php?eq=%5C%5B%20%5Cphi%3D%5Cphi_%7B1%7D%20%5Clor%20%5Cphi_%7B2%7D%20%5Clor%20%5Cphi_%7B3%7D%20%5C%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=%5C%5B%20%5Cphi_%7B1%7D%3DP_%7B%5B1%2C1%5D%7D%20%28%28h1%20%3E1500%29%20%5Cland%20%28j%20%3E3000%29%20%5Cland%20%28k%20%3E50%29%29%20%5C%5D%0A%5C%5B%20%5Cphi_%7B2%7D%3DP_%7B%5B1%2C1%5D%7D%20%28%28h1%20%3E2500%29%20%5Cland%20%28j%20%3E3000%29%29%20%5C%5D%0A%5C%5B%20%5Cphi_%7B3%7D%3DP_%7B%5B1%2C1%5D%7D%20%28%28h3%20%3E%20900%29%20%5Cland%20%28j%20%3E3000%29%20%5Cland%20%28k%20%3E50%29%29%20%5C%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+
 
 												
 Each sub-formula 1, 2 and 3 states a condition that leads to fullness on hospital h1 on the next day.
 
- 1 : on the occasion of more than 1500 patients at hospital h1, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara,
+* 1 : on the occasion of more than 1500 patients at hospital h1, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara,
 
- 2 : on the occasion of more than 2500 patients at hospital h1 and the number of hospitalized COVID-19 patients is more than 3000, 
+* 2 : on the occasion of more than 2500 patients at hospital h1 and the number of hospitalized COVID-19 patients is more than 3000, 
 
- 3 : on the occasion of more than 900 patients at hospital h3, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara.
+* 3 : on the occasion of more than 900 patients at hospital h3, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara.
 
-(3) Null hypothesis (H0): If one of the condition occurs, then the hospital h1 observes fullness by growing 80% over its capacity where the condition is h1 > 3048:
-(4) Alternative hypothesis (H1): If one of the condition occurs, then the hospital h1 does not observe fullness by growing 80% over its capacity where the condition is h1 <= 3048:
+3. Null hypothesis (H0): If one of the condition occurs, then the hospital h1 observes fullness by growing 80% over its capacity where the condition is h1 > 3048:
+4. Alternative hypothesis (H1): If one of the condition occurs, then the hospital h1 does not observe fullness by growing 80% over its capacity where the condition is h1 <= 3048:
 
 We assign our individual hypothesis-based experiment design work ow in Figure 2 for the remainder of the steps (4, 5, 6, and 7) of the scientific process. In the following sections, we explain how the work ow supervises the complete list of experiment procedures sequentially; specifically, design, execution, validation, and analysis.
 
@@ -72,7 +72,7 @@ Figure 2. The Kepler workflow for hypothesis-based experiment design
 # 1.2. Hypothesis to Experiment Model Transformations
 Following the fulfillment of the user operations for the system under study, Hypothesis 2 Experiment Transformator module, i.e., the primary step in Figure 5, initiates the
 simulation experiment workflow. Having the system specifications and the hypotheses is the compulsory provision to employ the tasks for SED-ML model generation from system specification and from SED-ML to Xperimenter model transformation. It is pertinent to remark that generated datasets are only necessary for the later phases of
-the work ow, e.g., experiment execution. 
+the workflow, e.g., experiment execution. 
 
 The module, an individualized Python script, is solely liable for the experiment model obtaining in two ways: model generation and model transformation. For this study, we underline how we interpret these two similar tasks: while we describe the model transformations as a practice over two or more conventional models serving the same domain, e.g., DSLs, we contemplate the data generation as another practice between any custom specification. In light of this, Hypothesis 2 Experiment Transformator practices the following functions:
 1. From user-defined system specification to SED-ML model generation,
@@ -233,6 +233,7 @@ The tool is capable of applying the following statistical methods on a given dat
 	2. Linear regression
 	3. Statistical summary
 We opted for a humble statistical search to scrutinize the utilized datasets in terms of the quality aspect, and for the illustration purposes of the offered analytical tool. To attain this objective, we revisit and expand the formerly exploited hypotheses specification with a condition where the hospital h1 has a number of patients less than 80% of its capacity in the next trace.
+
  = (1 _ 2 _ 3) ^ 4
 4 = P[1;1](h1next < 3048)
 
@@ -245,7 +246,7 @@ Figure 4. Time traces of the hospital capacities that refute the hypothesis
 
 # REFERENCES
 1. Cam, S., Dayibas, O., Gorur, B.K., Oguztuzun, H., Yilmaz, L., Chakladar, S., Doud, K., Smith, A.E., and Teran-Somohano, A., Supporting simulation experiments with megamodeling. In Proceedings of the 6th International Conference on Model-Driven Engineering and Software Development - Volume 1: MODELSWARD,, pages 372{378. INSTICC, Sciteress, 2018.
-2. TTB ANKARA TABP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021, from https://ato.org.tr/_les/documents/ATO 
+2. TTB ANKARA TABiP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021, from https://ato.org.tr/_les/documents/ATO 
 3. T.C. Saglik Bakanligi. COVID-19 Durum Raporu. Retrieved May 5, 2021, from https://covid19.saglik.gov.tr/TR-68443/covid-19-durum-raporu.html
 4. Republic of Turkey Ministry of Health (2021). COVID-19 Information Page, General Coronavirus Table. Retrieved May 6, 2021, from https://covid19.saglik.gov.tr/EN-69532/general-coronavirus-table.html.
 5. Ergurtuna, M., and Aydin Gol, E., An e_cient formula synthesis method with past signal temporal logic, 2019.

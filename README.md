@@ -89,6 +89,7 @@ model gracefully interprets the STL semantics into a markup language, i.e., XML.
 | default               	| initial values for a single model listOfModels           	|
 | default               	| initial values for a single task listOfTasks             	|
 | system specification  	| listOfDataGenerators                                     	|
+
 Table 2. User-defined specifications to SED-ML Mapping
 
 For the sake of simplicity and readability of the SED-ML model, we only presented the extended listOfHypotheses for a single variable part of the generated SED-ML model in the Listing below. A hypothesis in SED-ML consists of an expression that defines the hypothesis, itself, and three conditions with multiple expressions, and the expression relations are defined with and for this specific example. The temporalOperators are *P[1, 1]* for each condition and expression. And, the relation entity is used to explain the hypothesis H0 with its conditions for refuting or proving, as there is a single hypothesis. It is important to note that H1 uses the same conditions with H0, as the relation between the hypotheses is *CONTRADICT*.
@@ -193,6 +194,7 @@ The model transformation from SED-ML to Xperimenter is a relatively straightforw
 | dataGenerator 	| variable       	|
 | output        	| variable       	|
 | task.variable 	| design.varList 	|
+
 Table 3. SED-ML to Xperimenter Variable Mapping
 
 ## 1.3. Experiment Execution
@@ -245,4 +247,4 @@ The execution of the analysis produces graphical throughput in Figure 4. The thr
 2. TTB ANKARA TABiP ODASI, 2019. Verilerle Ankara'nin Sagligi. Retrieved May 5, 2021, from https://ato.org.tr/_les/documents/ATO 
 3. T.C. Saglik Bakanligi. COVID-19 Durum Raporu. Retrieved May 5, 2021, from https://covid19.saglik.gov.tr/TR-68443/covid-19-durum-raporu.html
 4. Republic of Turkey Ministry of Health (2021). COVID-19 Information Page, General Coronavirus Table. Retrieved May 6, 2021, from https://covid19.saglik.gov.tr/EN-69532/general-coronavirus-table.html.
-5. Ergurtuna, M., and Aydin Gol, E., An e_cient formula synthesis method with past signal temporal logic, 2019.
+5. Ergurtuna, M., and Aydin Gol, E., An effcient formula synthesis method with past signal temporal logic, 2019.

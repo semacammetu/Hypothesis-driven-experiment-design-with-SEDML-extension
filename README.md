@@ -8,8 +8,7 @@ The Hospital Bed Availability study is modeled based on the hospitals in the cap
 <p align="center">
   <img width="600" height="400" src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig15.png" />
 </p>
-
-Figure 1. Selected hospitals with Covid-19 services in Ankara
+<p align="center">Figure 1. Selected hospitals with Covid-19 services in Ankara</p>
 
 As we propose to study predictive analysis on hospital bed availability, we stipulated two main required data: First is the bed capacity of each hospital, second is the daily number of hospitalized COVID-19 patients in Turkey. However, as of being the capital city of Turkey and its location, hospitals in Ankara also admit patients from other cities due to its hospital capacity. Therefore, a third parameter for the number of COVID-19 patients from neighbor cities are added to the study. Additionally, a state vector retains the number of daily bed occupancy of each hospital i, the number of daily COVID-19 patients j, and the daily number of admitted COVID-19 patients from the neighbor cities k at a certain state. We denote the daily number of bed occupancy hi on each hospital i.
 
@@ -64,8 +63,7 @@ We assign our individual hypothesis-based experiment design workflow in Figure 2
 <p align="center">
   <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig10.png" />
 </p>
-
-Figure 2. The Kepler workflow for hypothesis-based experiment design
+<p align="center">Figure 2. The Kepler workflow for hypothesis-based experiment design</p>
 
 ## 1.2. Hypothesis to Experiment Model Transformations
 Following the fulfillment of the user operations for the system under study, Hypothesis 2 Experiment Transformator module, i.e., the primary step in Figure 2, initiates the simulation experiment workflow. Having the system specifications and the hypotheses is the compulsory provision to employ the tasks for SED-ML model generation from system specification and from SED-ML to Xperimenter model transformation. It is pertinent to remark that generated datasets are only necessary for the later phases of the workflow, e.g., experiment execution. 
@@ -184,6 +182,7 @@ The generation of another experiment model alongside the SED-ML is an essential 
 	31 	inport k: k;
 	32 }
 ~~~~
+
 The model transformation from SED-ML to Xperimenter is a relatively straightforward duty as both of the SED-ML and Xperimenter models possess many mutual variables. Table 3 summarizes the variable mapping effort from SED-ML to Xperimenter. An Xperimenter model starts with an experiment specification containing a description, an objective, a design, a simulation, an analysis, a visual and a target information. The model and simulation variables from SED-ML is equivalent to the same variables in Xperimenter. Having said that, while the task is representing the experiment, the dataGenerator and output collectively represents variable in Xperimenter. And, variable of the task are transformed into varList of design for Xperimenter.
 
 |     SED-ML    	|   Xperimenter  	|
@@ -213,8 +212,7 @@ The experiment run accumulates throughputs for the number of successful and fail
 <p align="center">
   <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig12.png" />
 </p>
-
-Figure 3. Hospital bed availability experiment result including the time steps with the hospital capacities that proving the hypothesis
+<p align="center">Figure 3. Hospital bed availability experiment result including the time steps with the hospital capacities that proving the hypothesis</p>
 		
 ## 1.4. Experiment Validation
 Trace analysis is a useful technique for verifying formal proofs. A trace checker analyses the traces and outlines any violations of the profiered formula. Due to its frugality and practicality of the method, employing a trace checker for STL specifications appears to be reasonable in terms of experiment result validation in this study. Taking that into consideration, we employed the STL Trace Checker (Ergurtuna and Gol, 2019) to validate the experiment output that we formerly conducted. The trace checker takes the previously stated conditions for the hospital bed availability analysis for the hospital h1 alongside the generated datasets and returns the proving and disproving data traces. The output of the STL Trace Checker appears to tally with our expectations for the number of the traces providing the conditions, i.e., 62, and the number of the traces the disproving the conditions, i.e., 4. 

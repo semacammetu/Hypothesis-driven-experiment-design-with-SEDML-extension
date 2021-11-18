@@ -5,7 +5,9 @@ In order to gain a deeper understanding of a megamodel and the process for the h
 ## 1.1. Hospital Bed Availability
 The Hospital Bed Availability study is modeled based on the hospitals in the capital city of Turkey, Ankara dedicated to serving the COVID-19 patients in Figure 1. There exist 6 hospitals and these hospitals are intentionally selected as they serve the most of the patients in Ankara. Authorities state that depending on the daily situation and their capacity, the hospitals transfer patients to the closest hospitals. For example, if the Bilkent Sehir Hastanesi gets filled up, the closest hospitals Ankara Gazi Universitesi Hastanesi and Sehit Sait Erturk Devlet Hastanesi will start to admit more patients than average, depending on the increase of daily COVID-19 patients. Thus, keeping the accurate number of occupancy and predicting the possible increase in the number of patients becomes quite important for the healthcare professionals.
 
-![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig15.png)
+<p align="center">
+  <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig15.png" />
+</p>
 
 Figure 1. Selected hospitals with Covid-19 services in Ankara
 
@@ -61,7 +63,9 @@ Hospital bed availability became one of the major concerns in many countries dur
 
 We assign our individual hypothesis-based experiment design workflow in Figure 2 for the remainder of the steps (4, 5, 6, and 7) of the scientific process. In the following sections, we explain how the work ow supervises the complete list of experiment procedures sequentially; specifically, design, execution, validation, and analysis.
 
-![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig10.png) 
+<p align="center">
+  <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig10.png" />
+</p>
 
 Figure 2. The Kepler workflow for hypothesis-based experiment design
 
@@ -208,7 +212,9 @@ The experiment run accumulates throughputs for the number of successful and fail
 4. The overall number of skipped time traces due to the non-fitting conditions for the hypotheses,
 5. The overall number of traces that the experiment used, excluding the first ten time traces in each dataset to enhance the quality of the input by eliminating the initial  randomized time traces.
 
-![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig12.png)
+<p align="center">
+  <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig12.png" />
+</p>
 
 Figure 3. Hospital bed availability experiment result including the time steps with the hospital capacities that proving the hypothesis
 		
@@ -232,8 +238,9 @@ We opted for a humble statistical search to scrutinize the utilized datasets in 
 
 The execution of the analysis produces graphical throughput in Figure 4. The throughput highlights that in every five trace intervals for the aggregated dataset, there exist two or more traces that refute the hypothesis. Bear in mind that the graphic depicts the aggregation of the 4 different datasets where each dataset contains 101 traces. Explained differently, approximately 1 traces in 101 traces disprove the hypothesis, and the analysis outcome is considerably close to our experiment result for the refuting cases. The significance of this analysis for the data quality can be assumed marginal regarding the aim of the study, i.e., having a complete work ow for the simulation experiment.
 
-
-![alt text](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig13.png)
+<p align="center">
+  <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig13.png" />
+</p>
 
 Figure 4. Time traces of the hospital capacities that refute the hypothesis
 

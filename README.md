@@ -48,6 +48,8 @@ Hospital bed availability became one of the major concerns in many countries dur
 <p align="center">
   <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/eq1.png" />
 </p>												
+	
+	
 	Each sub-formula &theta;<sub>1, &theta;<sub>2 and &theta;<sub>3 states a condition that leads to fullness on hospital h1 on the next day.
 
 	* &theta;<sub>1 : on the occasion of more than 1500 patients at hospital h1, the number of hospitalized COVID-19 patients is more than 3000, and more than 50 patients get transfered to Ankara,

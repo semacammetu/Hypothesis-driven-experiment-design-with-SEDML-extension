@@ -46,7 +46,7 @@ variables that are number of hospitalized COVID-19 patients in Turkey and number
 Hospital bed availability became one of the major concerns in many countries during the COVID-19 pandemic. Discovering the conditions causing this fatal problem, at least in Ankara, before it aggravates is the concern of this case study. Thus, we formulated our concern based on the previously established steps of the scientific process in the Introduction section, with an appropriate question addressing the problem and hypotheses targeting to solve the problem. Specifically, the formalized questions as ptSTL formulas describe the hypotheses.
 (1) Question: What are the conditions that originate fulness on hospital h1 on the next day? 
 (2) Conditions: The following conditions, defined according to the formal specification originate fullness on hospital h1 on the next day:
-\phi = \phi 1 _ \phi 2 _ \phi 3
+$\phi = \phi 1 _ \phi 2 _ \phi 3$
 1 = P[1;1]((h1 > 1500) ^ (j > 3000) ^ (k > 50))	
 2 = P[1;1]((h1 > 2500) ^ (j > 3000))
 3 = P[1;1]((h3 > 900) ^ (j > 3000) ^ (k > 50))

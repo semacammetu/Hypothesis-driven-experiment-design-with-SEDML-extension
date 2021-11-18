@@ -60,12 +60,13 @@ Hospital bed availability became one of the major concerns in many countries dur
 3. **Null hypothesis (H0)**: If one of the condition occurs, then the hospital h1 observes fullness by growing 80% over its capacity where the condition is *h1 > 3048*.
 4. **Alternative hypothesis (H1)**: If one of the condition occurs, then the hospital h1 does not observe fullness by growing 80% over its capacity where the condition is *h1 <= 3048*.
 
-We assign our individual hypothesis-based experiment design workflow in Figure 2 for the remainder of the steps (4, 5, 6, and 7) of the scientific process. In the following sections, we explain how the work ow supervises the complete list of experiment procedures sequentially; specifically, design, execution, validation, and analysis.
+We assign our individual hypothesis-based experiment design workflow in Figure 2 (**[Go to Kepler workflow](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/Kepler/HypothesisBasedExperimentGeneratorForHospital.kar)**}) for the remainder of the steps (4, 5, 6, and 7) of the scientific process. In the following sections, we explain how the work ow supervises the complete list of experiment procedures sequentially; specifically, design, execution, validation, and analysis.
 
 <p align="center">
   <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig10.png" />
 </p>
-<p align="center">Figure 2. The Kepler workflow for hypothesis-based experiment design [**Go to Kepler workflow: {[1](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/Kepler/HypothesisBasedExperimentGeneratorForHospital.kar)**}]</p>
+<p align="center">Figure 2. The Kepler workflow for hypothesis-based experiment design</p>
+
 
 ## 1.2. Hypothesis to Experiment Model Transformations [**Go to code: {[1](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/ltl_transformation/Hypothesis2Experiment.py)**}]
 Following the fulfillment of the user operations for the system under study, Hypothesis 2 Experiment Transformator module, i.e., the primary step in Figure 2, initiates the simulation experiment workflow. Having the system specifications and the hypotheses is the compulsory provision to employ the tasks for SED-ML model generation from system specification and from SED-ML to Xperimenter model transformation. It is pertinent to remark that generated datasets are only necessary for the later phases of the workflow, e.g., experiment execution. 

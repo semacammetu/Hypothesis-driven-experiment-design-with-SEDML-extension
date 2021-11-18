@@ -93,7 +93,7 @@ Table 2. User-defined specifications to SED-ML Mapping
 
 For the sake of simplicity and readability of the SED-ML model, we only presented the extended listOfHypotheses for a single variable part of the generated SED-ML model in the Listing below. A hypothesis in SED-ML consists of an expression that defines the hypothesis, itself, and three conditions with multiple expressions, and the expression relations are defined with and for this specific example. The temporalOperators are *P[1, 1]* for each condition and expression. And, the relation entity is used to explain the hypothesis H0 with its conditions for refuting or proving, as there is a single hypothesis. It is important to note that H1 uses the same conditions with H0, as the relation between the hypotheses is *CONTRADICT*.
 Finally, H0 has a referenceModel that relates the expressions to an actual model.
-~~~~
+```xml
 	1 <listOfHypotheses>
 	2 	<hypothesis metaid="H0">
 	3		<listOfExpressions>
@@ -144,7 +144,7 @@ Finally, H0 has a referenceModel that relates the expressions to an actual model
 	48 <listOfModels>
 	49 	<model metaid="model" source="/sourceModel" />
 	50 </listOfModels>
-~~~~
+```
 
 ### 1.2.2. SED-ML to Xperimenter Model Transformation
 The generation of another experiment model alongside the SED-ML is an essential effort to enrich the megamodel for the experimenters. The intention supporting this effort is to encourage the experimenters to develop their DSLs serving their particular needs, introduce them to the megamodel, and find common ground to bestow the knowledge. With this in mind, we undertook the Xperimenter model transformation from SED-ML, and achieved the Xperimenter model in the Listing below. We opted to apply model transformation from SED-ML to Xperimenter rather than the STL to Xperimenter. Because the SED-ML specification represents a formal model for capturing the essentials of simulation experiments including hypotheses and this method improves the ability to create traceability to the lower models, i.e., Xperimenter. It is crucial to note that the STL formula defining the hypotheses was given as user input. In order to keep the originality of the Xperimenter model and as it was not a primary goal in this research, those inputs were not translated into Xperimenter and processed by the Python script in the following Experiment Execution section. 

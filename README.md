@@ -18,7 +18,7 @@ When the user completes the system and hypothesis specification, our workflow fo
 4. Analysis Tool Executor: enables analysis options for the user. 
 
 
-# A PREDICTIVE ANALYSIS OF HOSPITAL BED AVAILABILITY DURING COVID-19 PANDEMIC
+# AN EXAMPLE: A PREDICTIVE ANALYSIS OF HOSPITAL BED AVAILABILITY DURING COVID-19 PANDEMIC
 
 In order to gain a deeper understanding of a megamodel and the process for the hypothesis-driven experiment design (Cam, 2018), we opted for a current and simple study domain to degrade the complexity of the proposed system. We consider that a hospital bed availability prediction system serves excellent for this purpose based on its importance, especially during COVID-19 pandemic. A rise in the number of COVID-19 patients burdens hospitals and it is also a valid indicator of the necessity of taking further measures against the pandemic.
 

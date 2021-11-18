@@ -65,9 +65,9 @@ We assign our individual hypothesis-based experiment design workflow in Figure 2
 <p align="center">
   <img src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig10.png" />
 </p>
-<p align="center">Figure 2. The Kepler workflow for hypothesis-based experiment design</p>
+<p align="center">Figure 2. The Kepler workflow for hypothesis-based experiment design [**Go to Kepler workflow: {[1](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/Kepler/HypothesisBasedExperimentGeneratorForHospital.kar)**}]</p>
 
-## 1.2. Hypothesis to Experiment Model Transformations [**Go to code: {[1](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/ltl_transformation/Hypothesis2Experiment.pyy)**}]
+## 1.2. Hypothesis to Experiment Model Transformations [**Go to code: {[1](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/ltl_transformation/Hypothesis2Experiment.py)**}]
 Following the fulfillment of the user operations for the system under study, Hypothesis 2 Experiment Transformator module, i.e., the primary step in Figure 2, initiates the simulation experiment workflow. Having the system specifications and the hypotheses is the compulsory provision to employ the tasks for SED-ML model generation from system specification and from SED-ML to Xperimenter model transformation. It is pertinent to remark that generated datasets are only necessary for the later phases of the workflow, e.g., experiment execution. 
 
 The module, an individualized Python script, is solely liable for the experiment model obtaining in two ways: model generation and model transformation. For this study, we underline how we interpret these two similar tasks: while we describe the model transformations as a practice over two or more conventional models serving the same domain, e.g., DSLs, we contemplate the data generation as another practice between any custom specification. In light of this, Hypothesis 2 Experiment Transformator practices the following functions:

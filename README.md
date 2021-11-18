@@ -50,7 +50,7 @@ Hospital bed availability became one of the major concerns in many countries dur
 </p>
 
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=%5C%5B%20%5Cphi_%7B1%7D%3DP_%7B%5B1%2C1%5D%7D%20%28%28h1%20%3E1500%29%20%5Cland%20%28j%20%3E3000%29%20%5Cland%20%28k%20%3E50%29%29%20%5C%5D%0A%5C%5B%20%5Cphi_%7B2%7D%3DP_%7B%5B1%2C1%5D%7D%20%28%28h1%20%3E2500%29%20%5Cland%20%28j%20%3E3000%29%29%20%5C%5D%0A%5C%5B%20%5Cphi_%7B3%7D%3DP_%7B%5B1%2C1%5D%7D%20%28%28h3%20%3E%20900%29%20%5Cland%20%28j%20%3E3000%29%20%5Cland%20%28k%20%3E50%29%29%20%5C%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/eq1.png)
 
 												
 	Each sub-formula &theta;<sub>1, &theta;<sub>2 and &theta;<sub>3 states a condition that leads to fullness on hospital h1 on the next day.
@@ -234,8 +234,8 @@ The tool is capable of applying the following statistical methods on a given dat
 	3. Statistical summary
 We opted for a humble statistical search to scrutinize the utilized datasets in terms of the quality aspect, and for the illustration purposes of the offered analytical tool. To attain this objective, we revisit and expand the formerly exploited hypotheses specification with a condition where the hospital h1 has a number of patients less than 80% of its capacity in the next trace.
 
- = (1 _ 2 _ 3) ^ 4
-4 = P[1;1](h1next < 3048)
+
+![equation](https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/eq2.png)
 
 The execution of the analysis produces graphical throughput in Figure 4. The throughput highlights that in every five trace intervals for the aggregated dataset, there exist two or more traces that refute the hypothesis. Bear in mind that the graphic depicts the aggregation of the 4 different datasets where each dataset contains 101 traces. Explained differently, approximately 1 traces in 101 traces disprove the hypothesis, and the analysis outcome is considerably close to our experiment result for the refuting cases. The significance of this analysis for the data quality can be assumed marginal regarding the aim of the study, i.e., having a complete work ow for the simulation experiment.
 

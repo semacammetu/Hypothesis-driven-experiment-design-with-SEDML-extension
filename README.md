@@ -34,7 +34,7 @@ The identified hospital bed capacity system owns several specific features and c
 2. An integer array for the non-capacity factors that are numbers representing the number of hospitalized COVID-19 patients in Turkey and number of admitted COVID-19 patients from neighbor cities counts: [6, 7],
 3. A map for all the hospitals with their capacity: 
 	'h0': [60, 117], 'h1': [1905,3810], 'h2': [150, 300], 'h3': [575, 1150], 'h4': [57, 115], 'h5': [240, 480], 'j':['0', '59720'], 'k': ['0', '59720'],
-5. A formula to trace the non-fitting time traces of the hospitals calculated with the multiplication of its capacity and the capacity fullness ratio, i.e., 80% (e.g., $h1 < 3048$)
+5. A formula to trace the non-fitting time traces of the hospitals calculated with the multiplication of its capacity and the capacity fullness ratio, i.e., 80% (e.g., h1 < 3048)
 
 Unfortunately, we found the acquisition of authentic test data difficult as they are not shared per city by the Turkish authorities. This impediment motivated us toward data generation alternatives for the prevalent problem domain, i.e., hospital bed availability during COVID-19. Therefore, for the purpose of this study, a data generation algorithm that simulates a system under study from random initial states was employed to create data sets for the hospital bed availability in Ankara during COVID-19. The algorithm generates data for the daily number of the occupied beds of each hospital and the transferred number of patients from the neighboring cities. The generated data were randomized upon the COVID-19 numbers shared by the Republic of Turkey Ministry of Health (Republic of Turkey Ministry of Health, 2021), i.e., number of patients for today. We assumed that the hospitals had half of their capacity was already occupied by non-COVID-19 patients, when the pandemic has started. The algorithm essentially builds data sets from random initial conditions for a provided number of time traces. The data contains the temporal operator P(previously) and the time interval [0, 101]. Although valuable for generating lots of data, this algorithm has the disadvantage of generating relatively small non-fitting data.
 
@@ -46,7 +46,7 @@ variables that are number of hospitalized COVID-19 patients in Turkey and number
 Hospital bed availability became one of the major concerns in many countries during the COVID-19 pandemic. Discovering the conditions causing this fatal problem, at least in Ankara, before it aggravates is the concern of this case study. Thus, we formulated our concern based on the previously established steps of the scientific process in the Introduction section, with an appropriate question addressing the problem and hypotheses targeting to solve the problem. Specifically, the formalized questions as ptSTL formulas describe the hypotheses.
 (1) Question: What are the conditions that originate fulness on hospital h1 on the next day? 
 (2) Conditions: The following conditions, defined according to the formal specification originate fullness on hospital h1 on the next day:
-$\phi = \phi 1 _ \phi 2 _ \phi 3$
+![equation]("https://latex.codecogs.com/svg.image?\[&space;\phi=\phi_{1}&space;\lor&space;\phi_{2}&space;\lor&space;\phi_{3}&space;\]" title="\[ \phi=\phi_{1} \lor \phi_{2} \lor \phi_{3} \]")
 1 = P[1;1]((h1 > 1500) ^ (j > 3000) ^ (k > 50))	
 2 = P[1;1]((h1 > 2500) ^ (j > 3000))
 3 = P[1;1]((h3 > 900) ^ (j > 3000) ^ (k > 50))

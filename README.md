@@ -239,9 +239,8 @@ The execution of the analysis produces graphical throughput in Figure 4. The thr
 
 <p align="center">
   <img width="400" height="300" src="https://github.com/semacammetu/Hypothesis-driven-experiment-design-with-SEDML-extension/blob/master/stl_fs_sm-master/stl_fs_sm-master/fig13.png" />
- <span>Figure 4. Time traces of the hospital capacities that refute the hypothesis</span>
 </p>
-
+<p align="center">Figure 4. Time traces of the hospital capacities that refute the hypothesis</p>
 
 
 # REFERENCES

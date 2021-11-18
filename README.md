@@ -47,7 +47,7 @@ Hospital bed availability became one of the major concerns in many countries dur
 (1) Question: What are the conditions that originate fulness on hospital h1 on the next day? 
 (2) Conditions: The following conditions, defined according to the formal specification originate fullness on hospital h1 on the next day:
 
-![equation]("https://latex.codecogs.com/svg.image?\[&space;\phi=\phi_{1}&space;\lor&space;\phi_{2}&space;\lor&space;\phi_{3}&space;\]")
+![equation](http://www.sciweavers.org/tex2img.php?eq=%5C%5B%20%5Cphi%3D%5Cphi_%7B1%7D%20%5Clor%20%5Cphi_%7B2%7D%20%5Clor%20%5Cphi_%7B3%7D%20%5C%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 1 = P[1;1]((h1 > 1500) ^ (j > 3000) ^ (k > 50))	
 2 = P[1;1]((h1 > 2500) ^ (j > 3000))

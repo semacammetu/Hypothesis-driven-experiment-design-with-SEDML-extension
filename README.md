@@ -89,7 +89,7 @@ model gracefully interprets the STL semantics into a markup language, i.e., XML.
 | default               	| initial values for a single model listOfModels           	|
 | default               	| initial values for a single task listOfTasks             	|
 | system specification  	| listOfDataGenerators                                     	|
-<p align="center">Table 2. User-defined specifications to SED-ML Mapping</p>
+Table 2. User-defined specifications to SED-ML Mapping
 
 For the sake of simplicity and readability of the SED-ML model, we only presented the extended listOfHypotheses for a single variable part of the generated SED-ML model in the Listing below. A hypothesis in SED-ML consists of an expression that defines the hypothesis, itself, and three conditions with multiple expressions, and the expression relations are defined with and for this specific example. The temporalOperators are *P[1, 1]* for each condition and expression. And, the relation entity is used to explain the hypothesis H0 with its conditions for refuting or proving, as there is a single hypothesis. It is important to note that H1 uses the same conditions with H0, as the relation between the hypotheses is *CONTRADICT*.
 Finally, H0 has a referenceModel that relates the expressions to an actual model.
@@ -193,7 +193,7 @@ The model transformation from SED-ML to Xperimenter is a relatively straightforw
 | dataGenerator 	| variable       	|
 | output        	| variable       	|
 | task.variable 	| design.varList 	|
-<p align="center">Table 3. SED-ML to Xperimenter Variable Mapping</p>
+Table 3. SED-ML to Xperimenter Variable Mapping
 
 ## 1.3. Experiment Execution
 Once achieving the experiment models, the execution phase of the experimentation process inaugurates the workflow for the execution. The experiment execution module, i.e., the second step in Figure 2, exclusively consists of a Python script that takes the generated data sets, the user-defined system specification, and the previously generated SED-ML model as inputs and determines the time traces that prove and refute the hypotheses. The script is fundamentally responsible for the following tasks:
